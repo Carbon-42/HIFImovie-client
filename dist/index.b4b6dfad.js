@@ -27175,7 +27175,7 @@ const MainView = ()=>{
             _id: "63e95cae143e89a078994f5c",
             Title: "High Fidelity",
             Description: "Three losers hang out in a record store and harass people.",
-            Image: "https://en.wikipedia.org/wiki/File:High_Fidelity_poster.jpg"
+            Image: require("7272bf0fa203634f")
         },
         {
             Genre: [
@@ -27195,7 +27195,7 @@ const MainView = ()=>{
             _id: "63e96864143e89a078994f63",
             Title: "Reservoir Dogs",
             Description: "When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.",
-            Image: "https://en.wikipedia.org/wiki/File:Reservoir_Dogs.png"
+            Image: require("17c450df3223be3d")
         },
         {
             Genre: [
@@ -27215,7 +27215,7 @@ const MainView = ()=>{
             _id: "63e9633c143e89a078994f5e",
             Title: "The Life Aquatic with Steve Zissou",
             Description: "With a plan to exact revenge on a mythical shark that killed his partner, Oceanographer Steve Zissou (Bill Murray) rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son.",
-            Image: "https://en.wikipedia.org/wiki/File:Lifeaquaticposter.jpg"
+            Image: require("b6df0ec32b344a45")
         },
         {
             Genre: [
@@ -27235,7 +27235,7 @@ const MainView = ()=>{
             _id: "63e96994143e89a078994f65",
             Title: "Pulp Fiction",
             Description: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-            Image: "https://en.wikipedia.org/wiki/File:Pulp_Fiction_(1994)_poster.jpg"
+            Image: require("990a8b92a3efd08a")
         },
         {
             Genre: [
@@ -27255,7 +27255,7 @@ const MainView = ()=>{
             _id: "63e988c8143e89a078994f6f",
             Title: "The Grand Budapest Hotel",
             Description: "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel''s glorious years under an exceptional concierge.",
-            Image: "https://en.wikipedia.org/wiki/File:The_Grand_Budapest_Hotel.png"
+            Image: require("4800b0442889de09")
         }
     ]);
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
@@ -27264,14 +27264,14 @@ const MainView = ()=>{
         onBackClick: ()=>setSelectedMovie(null)
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 122,
+        lineNumber: 121,
         columnNumber: 7
     }, undefined);
     if (movies.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: "The list is empty!"
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 130,
+        lineNumber: 129,
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27282,16 +27282,16 @@ const MainView = ()=>{
                 }
             }, movie._id, false, {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 136,
+                lineNumber: 135,
                 columnNumber: 9
             }, undefined))
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 134,
+        lineNumber: 133,
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "e0QlveAYpBXbwXYLlTLk35VXwxM=");
+_s(MainView, "z9WS/dgQOYmCoe0qVcNpyteOAHQ=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
@@ -27301,7 +27301,7 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf"}],"bwuIu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf","7272bf0fa203634f":"6EPhH","17c450df3223be3d":"1NqXX","b6df0ec32b344a45":"6TUpx","990a8b92a3efd08a":"gCkim","4800b0442889de09":"ft2Ez"}],"bwuIu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27718,6 +27718,55 @@ $RefreshReg$(_c, "MovieView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf"}],"lJZlQ":[function() {},{}]},["k65zC","fRSMP","d8Dch"], "d8Dch", "parcelRequireae51")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf"}],"6EPhH":[function(require,module,exports) {
+module.exports = require("1fd4c10ae3db8347").getBundleURL("byUka") + "High_Fidelity_poster.b2457a16.jpg" + "?" + Date.now();
+
+},{"1fd4c10ae3db8347":"95GEp"}],"95GEp":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"1NqXX":[function(require,module,exports) {
+module.exports = require("73d7af433b4183e9").getBundleURL("byUka") + "Reservoir_Dogs.6baa7967.png" + "?" + Date.now();
+
+},{"73d7af433b4183e9":"95GEp"}],"6TUpx":[function(require,module,exports) {
+module.exports = require("578e5d126018135d").getBundleURL("byUka") + "Lifeaquaticposter.68be6065.jpg" + "?" + Date.now();
+
+},{"578e5d126018135d":"95GEp"}],"gCkim":[function(require,module,exports) {
+module.exports = require("a63a3aeaabc828bc").getBundleURL("byUka") + "Pulp_Fiction_(1994)_poster.bba5dfe0.jpg" + "?" + Date.now();
+
+},{"a63a3aeaabc828bc":"95GEp"}],"ft2Ez":[function(require,module,exports) {
+module.exports = require("332832d65681160e").getBundleURL("byUka") + "The_Grand_Budapest_Hotel.571fc0e9.png" + "?" + Date.now();
+
+},{"332832d65681160e":"95GEp"}],"lJZlQ":[function() {},{}]},["k65zC","fRSMP","d8Dch"], "d8Dch", "parcelRequireae51")
 
 //# sourceMappingURL=index.b4b6dfad.js.map

@@ -22,7 +22,7 @@ export const MainView = () => {
       _id: "63e95cae143e89a078994f5c",
       Title: "High Fidelity",
       Description: "Three losers hang out in a record store and harass people.",
-      Image: "https://en.wikipedia.org/wiki/File:High_Fidelity_poster.jpg",
+      Image: require("../../../img/High_Fidelity_poster.jpg"),
     },
     {
       Genre: [
@@ -44,7 +44,7 @@ export const MainView = () => {
       Title: "Reservoir Dogs",
       Description:
         "When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.",
-      Image: "https://en.wikipedia.org/wiki/File:Reservoir_Dogs.png",
+      Image: require("../../../img/Reservoir_Dogs.png"),
     },
     {
       Genre: [
@@ -66,7 +66,7 @@ export const MainView = () => {
       Title: "The Life Aquatic with Steve Zissou",
       Description:
         "With a plan to exact revenge on a mythical shark that killed his partner, Oceanographer Steve Zissou (Bill Murray) rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son.",
-      Image: "https://en.wikipedia.org/wiki/File:Lifeaquaticposter.jpg",
+      Image: require("../../../img/Lifeaquaticposter.jpg"),
     },
     {
       Genre: [
@@ -88,8 +88,7 @@ export const MainView = () => {
       Title: "Pulp Fiction",
       Description:
         "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-      Image:
-        "https://en.wikipedia.org/wiki/File:Pulp_Fiction_(1994)_poster.jpg",
+      Image: require("../../../img/Pulp_Fiction_(1994)_poster.jpg"),
     },
     {
       Genre: [
@@ -111,7 +110,7 @@ export const MainView = () => {
       Title: "The Grand Budapest Hotel",
       Description:
         "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel''s glorious years under an exceptional concierge.",
-      Image: "https://en.wikipedia.org/wiki/File:The_Grand_Budapest_Hotel.png",
+      Image: require("../../../img/The_Grand_Budapest_Hotel.png"),
     },
   ]);
 
