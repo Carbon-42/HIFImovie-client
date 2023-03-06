@@ -12,14 +12,25 @@ export const MovieView = ({ movie, onBackClick }) => {
         <span>Description: </span>
         <span>{movie.Description}</span>
       </div>
+      <br></br>
       <div>
-        <span>Genre: </span>
-        <span>{movie.Genre}</span>
+        <span>Genre </span>
+        <br></br>
+        <span> Name: {movie.Genre.map((Genre) => Genre.Name)}</span>
+        <br></br>
+        <span>
+          Description: {movie.Genre.map((Genre) => Genre.Description)}
+        </span>
       </div>
+      <br></br>
       <div>
-        <span>Director: </span>
-        <span>{movie.Director}</span>
+        <span>Director </span>
+        <br></br>
+        <span>Name: {movie.Director.map((Director) => Director.Name)}</span>
+        <br></br>
+        <span>Bio: {movie.Director.map((Director) => Director.Bio)}</span>
       </div>
+      <br></br>
       <div>
         <span>Actors: </span>
         <span>{movie.Actors}</span>
