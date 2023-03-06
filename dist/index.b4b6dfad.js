@@ -27159,94 +27159,119 @@ const MainView = ()=>{
     _s();
     const [movies, setMovies] = (0, _react.useState)([
         {
-            Genre: {
-                Name: "Comedy",
-                Description: "A comedy film is a category of film which emphasizes humor. These films are designed to make the audience laugh through amusement. Films in this style traditionally have a happy ending. Comedy is one of the oldest genres in film—and derived from the classical comedy in theatre. Some of the earliest silent films were comedies, as slapstick comedy often relies on visual depictions, without requiring sound. When sound films became more prevalent during the 1920s, comedy films grew in popularity, as laughter could result from burlesque situations but now also dialogue."
-            },
-            Director: {
-                Name: "Stephen Frears",
-                Bio: "Stephen Arthur Frears is an English director and producer of film and television often depicting real life stories as well as projects that explore social class through sharply drawn characters."
-            },
+            Genre: [
+                {
+                    Name: "Comedy",
+                    Description: "A comedy film is a category of film which emphasizes humor. These films are designed to make the audience laugh through amusement. Films in this style traditionally have a happy ending. Comedy is one of the oldest genres in film—and derived from the classical comedy in theatre. Some of the earliest silent films were comedies, as slapstick comedy often relies on visual depictions, without requiring sound. When sound films became more prevalent during the 1920s, comedy films grew in popularity, as laughter could result from burlesque situations but now also dialogue."
+                }
+            ],
+            Director: [
+                {
+                    Name: "Stephen Frears",
+                    Bio: "Stephen Arthur Frears is an English director and producer of film and television often depicting real life stories as well as projects that explore social class through sharply drawn characters."
+                }
+            ],
             Actors: [],
             _id: "63e95cae143e89a078994f5c",
             Title: "High Fidelity",
-            Description: "Three losers hang out in a record store and harass people."
+            Description: "Three losers hang out in a record store and harass people.",
+            Image: "https://en.wikipedia.org/wiki/File:High_Fidelity_poster.jpg"
         },
         {
-            Genre: {
-                Name: "Action",
-                Description: "Action film is a film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats."
-            },
-            Director: {
-                Name: "Quentin Tarantino",
-                Bio: "Quentin Jerome Tarantino is an American film director, writer, producer, and actor. His films are characterized by frequent references to popular culture and film genres, non-linear storylines, dark humor, stylized violence, extended dialogue, pervasive use of profanity, cameos and ensemble casts.",
-                Birth: "1963"
-            },
+            Genre: [
+                {
+                    Name: "Action",
+                    Description: "Action film is a film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats."
+                }
+            ],
+            Director: [
+                {
+                    Name: "Quentin Tarantino",
+                    Bio: "Quentin Jerome Tarantino is an American film director, writer, producer, and actor. His films are characterized by frequent references to popular culture and film genres, non-linear storylines, dark humor, stylized violence, extended dialogue, pervasive use of profanity, cameos and ensemble casts.",
+                    Birth: "1963"
+                }
+            ],
             Actors: [],
             _id: "63e96864143e89a078994f63",
             Title: "Reservoir Dogs",
-            Description: "When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant."
+            Description: "When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.",
+            Image: "https://en.wikipedia.org/wiki/File:Reservoir_Dogs.png"
         },
         {
-            Genre: {
-                Name: "Comedy",
-                Description: "A comedy film is a category of film which emphasizes humor. These films are designed to make the audience laugh through amusement. Films in this style traditionally have a happy ending. Comedy is one of the oldest genres in film—and derived from the classical comedy in theatre. Some of the earliest silent films were comedies, as slapstick comedy often relies on visual depictions, without requiring sound. When sound films became more prevalent during the 1920s, comedy films grew in popularity, as laughter could result from burlesque situations but now also dialogue."
-            },
-            Director: {
-                Name: "Wes Anderson",
-                Bio: "Born on a desert island with Box Trolls",
-                Birth: "1969"
-            },
+            Genre: [
+                {
+                    Name: "Comedy",
+                    Description: "A comedy film is a category of film which emphasizes humor. These films are designed to make the audience laugh through amusement. Films in this style traditionally have a happy ending. Comedy is one of the oldest genres in film—and derived from the classical comedy in theatre. Some of the earliest silent films were comedies, as slapstick comedy often relies on visual depictions, without requiring sound. When sound films became more prevalent during the 1920s, comedy films grew in popularity, as laughter could result from burlesque situations but now also dialogue."
+                }
+            ],
+            Director: [
+                {
+                    Name: "Wes Anderson",
+                    Bio: "Born on a desert island with Box Trolls",
+                    Birth: "1969"
+                }
+            ],
             Actors: [],
             _id: "63e9633c143e89a078994f5e",
             Title: "The Life Aquatic with Steve Zissou",
-            Description: "With a plan to exact revenge on a mythical shark that killed his partner, Oceanographer Steve Zissou (Bill Murray) rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son."
+            Description: "With a plan to exact revenge on a mythical shark that killed his partner, Oceanographer Steve Zissou (Bill Murray) rallies a crew that includes his estranged wife, a journalist, and a man who may or may not be his son.",
+            Image: "https://en.wikipedia.org/wiki/File:Lifeaquaticposter.jpg"
         },
         {
-            Genre: {
-                Name: "Action",
-                Description: "Action film is a film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats."
-            },
-            Director: {
-                Name: "Quentin Tarantino",
-                Bio: "Quentin Jerome Tarantino is an American film director, writer, producer, and actor. His films are characterized by frequent references to popular culture and film genres, non-linear storylines, dark humor, stylized violence, extended dialogue, pervasive use of profanity, cameos and ensemble casts.",
-                Birth: "1963"
-            },
+            Genre: [
+                {
+                    Name: "Action",
+                    Description: "Action film is a film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats."
+                }
+            ],
+            Director: [
+                {
+                    Name: "Quentin Tarantino",
+                    Bio: "Quentin Jerome Tarantino is an American film director, writer, producer, and actor. His films are characterized by frequent references to popular culture and film genres, non-linear storylines, dark humor, stylized violence, extended dialogue, pervasive use of profanity, cameos and ensemble casts.",
+                    Birth: "1963"
+                }
+            ],
             Actors: [],
             _id: "63e96994143e89a078994f65",
             Title: "Pulp Fiction",
-            Description: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+            Description: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+            Image: "https://en.wikipedia.org/wiki/File:Pulp_Fiction_(1994)_poster.jpg"
         },
         {
-            Genre: {
-                Name: "Comedy",
-                Description: "A comedy film is a category of film which emphasizes humor. These films are designed to make the audience laugh through amusement. Films in this style traditionally have a happy ending. Comedy is one of the oldest genres in film—and derived from the classical comedy in theatre. Some of the earliest silent films were comedies, as slapstick comedy often relies on visual depictions, without requiring sound. When sound films became more prevalent during the 1920s, comedy films grew in popularity, as laughter could result from burlesque situations but now also dialogue."
-            },
-            Director: {
-                Name: "Wes Anderson",
-                Bio: "Born on a desert island with Box Trolls",
-                Birth: "1969"
-            },
+            Genre: [
+                {
+                    Name: "Comedy",
+                    Description: "A comedy film is a category of film which emphasizes humor. These films are designed to make the audience laugh through amusement. Films in this style traditionally have a happy ending. Comedy is one of the oldest genres in film—and derived from the classical comedy in theatre. Some of the earliest silent films were comedies, as slapstick comedy often relies on visual depictions, without requiring sound. When sound films became more prevalent during the 1920s, comedy films grew in popularity, as laughter could result from burlesque situations but now also dialogue."
+                }
+            ],
+            Director: [
+                {
+                    Name: "Wes Anderson",
+                    Bio: "Born on a desert island with Box Trolls",
+                    Birth: "1969"
+                }
+            ],
             Actors: [],
             _id: "63e988c8143e89a078994f6f",
             Title: "The Grand Budapest Hotel",
-            Description: "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel''s glorious years under an exceptional concierge."
+            Description: "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel''s glorious years under an exceptional concierge.",
+            Image: "https://en.wikipedia.org/wiki/File:The_Grand_Budapest_Hotel.png"
         }
     ]);
     const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
     if (selectedMovie) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieView.MovieView), {
         movie: selectedMovie,
-        onBackClick: ()=>selectedMovie(null)
+        onBackClick: ()=>setSelectedMovie(null)
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 96,
+        lineNumber: 122,
         columnNumber: 7
     }, undefined);
     if (movies.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: "The list is empty!"
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 104,
+        lineNumber: 130,
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27257,16 +27282,16 @@ const MainView = ()=>{
                 }
             }, movie._id, false, {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 110,
+                lineNumber: 136,
                 columnNumber: 9
             }, undefined))
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 108,
+        lineNumber: 134,
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "FSKTe64IkeISCfYuKbru4EsNEGk=");
+_s(MainView, "e0QlveAYpBXbwXYLlTLk35VXwxM=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
@@ -27542,24 +27567,7 @@ const MovieView = ({ movie , onBackClick  })=>{
                 lineNumber: 11,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Genre: "
-                    }, void 0, false, {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: movie.Genre
-                    }, void 0, false, {
-                        fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 17,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "src/components/movie-view/movie-view.jsx",
                 lineNumber: 15,
                 columnNumber: 7
@@ -27567,15 +27575,38 @@ const MovieView = ({ movie , onBackClick  })=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Director: "
+                        children: "Genre "
                     }, void 0, false, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: [
+                            " Name: ",
+                            movie.Genre.map((Genre)=>Genre.Name)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
                         lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: movie.Director
-                    }, void 0, false, {
+                        children: [
+                            "Description: ",
+                            movie.Genre.map((Genre)=>Genre.Description)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/movie-view/movie-view.jsx",
                         lineNumber: 21,
                         columnNumber: 9
@@ -27583,7 +27614,62 @@ const MovieView = ({ movie , onBackClick  })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 19,
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/components/movie-view/movie-view.jsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: "Director "
+                    }, void 0, false, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: [
+                            "Name: ",
+                            movie.Director.map((Director)=>Director.Name)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: [
+                            "Bio: ",
+                            movie.Director.map((Director)=>Director.Bio)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/movie-view/movie-view.jsx",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/movie-view/movie-view.jsx",
+                lineNumber: 26,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/components/movie-view/movie-view.jsx",
+                lineNumber: 33,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27592,20 +27678,20 @@ const MovieView = ({ movie , onBackClick  })=>{
                         children: "Actors: "
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 24,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: movie.Actors
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 25,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 23,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27613,7 +27699,7 @@ const MovieView = ({ movie , onBackClick  })=>{
                 children: "Back"
             }, void 0, false, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 27,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined)
         ]
