@@ -52,9 +52,8 @@ export const MainView = () => {
         </Col>
       ) : selectedMovie ? (
         //Display MovieView of selected movie when its clicked
-        <Col md={8}>
+        <Col>
           <MovieView
-            style={{ border: "1px solid green" }}
             movie={selectedMovie}
             onBackClick={() => setSelectedMovie(null)}
           />
