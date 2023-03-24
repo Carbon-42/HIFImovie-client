@@ -1,20 +1,20 @@
 import Proptypes from "prop-types";
 import { Accordion, Button, Card } from "react-bootstrap";
+import "./movie-card.scss";
 
 export const MovieCard = ({ movie, onMovieClick }) => {
   return (
-    <Card className="h-100">
-      <Accordion>
-        <Accordion.Item eventkey="0">
-          <Card.Img
-            variant="top"
-            src={movie.image}
-            onClick={() => {
-              onMovieClick(movie);
-            }}
-          />
-        </Accordion.Item>
-        <Accordion.Header>
+    <Card className="h-100 bg-secondary">
+      <Accordion className="h-100 bg-primary">
+        <Card.Img
+          className="card-img"
+          variant="top"
+          src={movie.image}
+          onClick={() => {
+            onMovieClick(movie);
+          }}
+        />
+        <Accordion.Header className="">
           <Card.Title>{movie.title}</Card.Title>
         </Accordion.Header>
         <Accordion.Body>
