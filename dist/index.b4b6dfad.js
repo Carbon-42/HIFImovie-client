@@ -2965,7 +2965,7 @@ $RefreshReg$(_c, "MyFlixApplication");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf","react-bootstrap/Container":"hEdsw","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./components/main-view/main-view":"4gflv","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf","react-bootstrap/Container":"hEdsw","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh","./index.scss":"lJZlQ"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("512e1dc2f1a5dab4");
 
@@ -27223,7 +27223,11 @@ const MainView = ()=>{
                     lineNumber: 44,
                     columnNumber: 11
                 }, undefined),
-                "or",
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/components/main-view/main-view.jsx",
+                    lineNumber: 50,
+                    columnNumber: 11
+                }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _signupView.SignupView), {}, void 0, false, {
                     fileName: "src/components/main-view/main-view.jsx",
                     lineNumber: 51,
@@ -27260,9 +27264,9 @@ const MainView = ()=>{
             children: [
                 movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                         className: "mb-5",
-                        sm: 4,
-                        md: 3,
-                        lg: 2,
+                        sm: 6,
+                        md: 6,
+                        lg: 3,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                             movie: movie,
                             onMovieClick: (newSelectedMovie)=>{
@@ -27325,9 +27329,9 @@ var _reactBootstrap = require("react-bootstrap");
 var _movieCardScss = require("./movie-card.scss");
 const MovieCard = ({ movie , onMovieClick  })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card), {
-        className: "h-100 bg-secondary",
+        className: "h-100 bg-secondary border border-3",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Accordion), {
-            className: "h-100 bg-primary",
+            className: "h-100 bg-secondary",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Img, {
                     className: "card-img",
@@ -27356,6 +27360,7 @@ const MovieCard = ({ movie , onMovieClick  })=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Accordion).Body, {
+                    className: "p-1",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Body, {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Text, {
@@ -41203,6 +41208,7 @@ const MovieView = ({ movie , onBackClick  })=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "img",
                     style: {
                         border: "10px solid black"
                     },
@@ -41229,17 +41235,31 @@ const MovieView = ({ movie , onBackClick  })=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "Title: "
+                                className: "fw-bold fs-3 text-decoration-underline",
+                                children: "Movie"
                             }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 17,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 18,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "fw-bold fs-5",
+                                children: "Title: "
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 19,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: movie.title
                             }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 18,
+                                lineNumber: 20,
                                 columnNumber: 11
                             }, undefined)
                         ]
@@ -41251,50 +41271,37 @@ const MovieView = ({ movie , onBackClick  })=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "fw-bold fs-5",
                                 children: "Description: "
                             }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 21,
+                                lineNumber: 23,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: movie.description
                             }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 22,
+                                lineNumber: 24,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 20,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 24,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "Genre "
+                                className: "fw-bold fs-3 text-decoration-underline",
+                                children: "Genre"
                             }, void 0, false, {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 26,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 27,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: [
-                                    " Name: ",
-                                    genreName
-                                ]
-                            }, void 0, true, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 28,
                                 columnNumber: 11
@@ -41305,74 +41312,113 @@ const MovieView = ({ movie , onBackClick  })=>{
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: [
-                                    "Description: ",
-                                    genreDescription
-                                ]
-                            }, void 0, true, {
+                                className: "fw-bold fs-5",
+                                children: " Name: "
+                            }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 30,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: genreName
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 31,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 32,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "fw-bold fs-5",
+                                children: "Description: "
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 33,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: genreDescription
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 34,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 25,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 32,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "Director "
-                            }, void 0, false, {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 34,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 35,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "fw-bold fs-3 text-decoration-underline",
                                 children: [
-                                    "Name: ",
-                                    directorName
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 36,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 37,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: [
-                                    "Bio: ",
-                                    directorBio
+                                    "Director",
+                                    " "
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 38,
                                 columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 41,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "fw-bold fs-5",
+                                children: "Name: "
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 42,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: directorName
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 43,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 44,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "fw-bold fs-5",
+                                children: "Bio: "
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 45,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: directorBio
+                            }, void 0, false, {
+                                fileName: "src/components/movie-view/movie-view.jsx",
+                                lineNumber: 46,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 33,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 40,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41384,7 +41430,7 @@ const MovieView = ({ movie , onBackClick  })=>{
                         children: "Back"
                     }, void 0, false, {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 41,
+                        lineNumber: 49,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -41425,6 +41471,7 @@ var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _form = require("react-bootstrap/Form");
 var _formDefault = parcelHelpers.interopDefault(_form);
+var _indexScss = require("../../index.scss");
 var _s = $RefreshSig$();
 const LoginView = ({ onLoggedIn  })=>{
     _s();
@@ -41455,20 +41502,30 @@ const LoginView = ({ onLoggedIn  })=>{
         });
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default), {
+        className: "border border-5 p-3",
         onSubmit: handleSubmit,
         children: [
-            "LOGIN",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                className: "fw-bold fs-5 text-decoration-underline mb-4",
+                children: "LOGIN"
+            }, void 0, false, {
+                fileName: "src/components/login-view/login-view.jsx",
+                lineNumber: 41,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
                 controlId: "formUsername",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                        className: "fw-medium",
                         children: "Username"
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 42,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        className: "bg-primary mb-3",
                         type: "text",
                         value: username,
                         onChange: (e)=>setUsername(e.target.value),
@@ -41476,39 +41533,41 @@ const LoginView = ({ onLoggedIn  })=>{
                         minLength: 3
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 43,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 41,
+                lineNumber: 44,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
                 controlId: "formPassword",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                        className: "fw-medium",
                         children: "Password"
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 52,
+                        lineNumber: 56,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        className: "bg-primary mb-3",
                         type: "password",
                         value: password,
                         onChange: (e)=>setPassword(e.target.value),
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 53,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 51,
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
@@ -41517,13 +41576,13 @@ const LoginView = ({ onLoggedIn  })=>{
                 children: "Submit"
             }, void 0, false, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 60,
+                lineNumber: 65,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/login-view/login-view.jsx",
-        lineNumber: 39,
+        lineNumber: 40,
         columnNumber: 5
     }, undefined);
 };
@@ -41537,7 +41596,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"4OGiN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80","../../index.scss":"lJZlQ"}],"lJZlQ":[function() {},{}],"4OGiN":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$73d1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41553,6 +41612,7 @@ var _button = require("react-bootstrap/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _form = require("react-bootstrap/Form");
 var _formDefault = parcelHelpers.interopDefault(_form);
+var _indexScss = require("../../index.scss");
 var _s = $RefreshSig$();
 const SignupView = ()=>{
     _s();
@@ -41582,20 +41642,29 @@ const SignupView = ()=>{
         });
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default), {
+        className: "border border-5 p-3",
         onSubmit: handleSubmit,
         children: [
-            "SIGNUP",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                className: "fw-bold fs-5 text-decoration-underline mb-4",
+                children: "SIGNUP"
+            }, void 0, false, {
+                fileName: "src/components/signup-view/signup-view.jsx",
+                lineNumber: 39,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
                 controlId: "formUsername",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
-                        children: "Username: "
+                        children: "Username"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 40,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        className: "bg-primary mb-3",
                         type: "text",
                         value: username,
                         onChange: (e)=>setUsername(e.target.value),
@@ -41603,26 +41672,27 @@ const SignupView = ()=>{
                         minLength: 3
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 41,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 39,
+                lineNumber: 42,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
                 controlId: "formPassword",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
-                        children: "Password: "
+                        children: "Password"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 50,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        className: "bg-primary mb-3",
                         type: "password",
                         value: password,
                         onChange: (e)=>setPassword(e.target.value),
@@ -41630,65 +41700,67 @@ const SignupView = ()=>{
                         minLength: 5
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 51,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 49,
+                lineNumber: 53,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
                 controlId: "formEmail",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
-                        children: "Email: "
+                        children: "Email"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 60,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        className: "bg-primary mb-3",
                         type: "email",
                         value: email,
                         onChange: (e)=>setEmail(e.target.value),
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 61,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 59,
+                lineNumber: 64,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
                 controlId: "formBirthday",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
-                        children: "Birthday: "
+                        children: "Birthday"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 69,
+                        lineNumber: 75,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
+                        className: "bg-primary mb-3",
                         type: "date",
                         value: birthday,
                         onChange: (e)=>setBirthday(e.target.value),
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
-                        lineNumber: 70,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 68,
+                lineNumber: 74,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
@@ -41697,13 +41769,13 @@ const SignupView = ()=>{
                 children: "Submit"
             }, void 0, false, {
                 fileName: "src/components/signup-view/signup-view.jsx",
-                lineNumber: 77,
+                lineNumber: 84,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/signup-view/signup-view.jsx",
-        lineNumber: 37,
+        lineNumber: 38,
         columnNumber: 5
     }, undefined);
 };
@@ -41717,6 +41789,6 @@ $RefreshReg$(_c, "SignupView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80"}],"lJZlQ":[function() {},{}]},["k65zC","fRSMP","d8Dch"], "d8Dch", "parcelRequireae51")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"aRELh","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"6ZIFf","react-bootstrap/Button":"aPzUt","react-bootstrap/Form":"iBZ80","../../index.scss":"lJZlQ"}],"lJZlQ":[function() {},{}],"lJZlQ":[function() {},{}]},["k65zC","fRSMP","d8Dch"], "d8Dch", "parcelRequireae51")
 
 //# sourceMappingURL=index.b4b6dfad.js.map
