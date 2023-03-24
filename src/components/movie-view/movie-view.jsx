@@ -8,34 +8,42 @@ export const MovieView = ({ movie, onBackClick }) => {
   return (
     <Row className="justify-content-md-center" xs={1} sm={1} md={2}>
       <Col>
-        <div style={{ border: "10px solid black" }}>
+        <div className="img" style={{ border: "10px solid black" }}>
           <img src={movie.image} className="w-100" />
         </div>
       </Col>
       <Col>
         <div>
-          <span>Title: </span>
+          <span className="fw-bold fs-3 text-decoration-underline">Movie</span>
+          <br></br>
+          <span className="fw-bold fs-5">Title: </span>
           <span>{movie.title}</span>
         </div>
         <div>
-          <span>Description: </span>
+          <span className="fw-bold fs-5">Description: </span>
           <span>{movie.description}</span>
         </div>
         <br></br>
         <div>
-          <span>Genre </span>
+          <span className="fw-bold fs-3 text-decoration-underline">Genre</span>
           <br></br>
-          <span> Name: {genreName}</span>
+          <span className="fw-bold fs-5"> Name: </span>
+          <span>{genreName}</span>
           <br></br>
-          <span>Description: {genreDescription}</span>
+          <span className="fw-bold fs-5">Description: </span>
+          <span>{genreDescription}</span>
         </div>
         <br></br>
         <div>
-          <span>Director </span>
+          <span className="fw-bold fs-3 text-decoration-underline">
+            Director{" "}
+          </span>
           <br></br>
-          <span>Name: {directorName}</span>
+          <span className="fw-bold fs-5">Name: </span>
+          <span>{directorName}</span>
           <br></br>
-          <span>Bio: {directorBio}</span>
+          <span className="fw-bold fs-5">Bio: </span>
+          <span>{directorBio}</span>
         </div>
         <br></br>
         <button
