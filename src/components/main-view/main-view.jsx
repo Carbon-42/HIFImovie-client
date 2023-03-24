@@ -66,7 +66,7 @@ export const MainView = () => {
         //Display MovieCards list
         <>
           {movies.map((movie) => (
-            <Col className="mb-5" key={movie.id} md={3}>
+            <Col className="mb-5" key={movie.id} sm={4} md={3} lg={2}>
               <MovieCard
                 key={movie.id}
                 movie={movie}
