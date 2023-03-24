@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import "../../index.scss";
 
 export const SignupView = () => {
   const [username, setUsername] = useState("");
@@ -34,11 +35,14 @@ export const SignupView = () => {
     });
   };
   return (
-    <Form onSubmit={handleSubmit}>
-      SIGNUP
+    <Form className="border border-5 p-3" onSubmit={handleSubmit}>
+      <Form.Label className="fw-bold fs-5 text-decoration-underline mb-4">
+        SIGNUP
+      </Form.Label>
       <Form.Group controlId="formUsername">
-        <Form.Label>Username: </Form.Label>
+        <Form.Label>Username</Form.Label>
         <Form.Control
+          className="bg-primary mb-3"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -47,8 +51,9 @@ export const SignupView = () => {
         />
       </Form.Group>
       <Form.Group controlId="formPassword">
-        <Form.Label>Password: </Form.Label>
+        <Form.Label>Password</Form.Label>
         <Form.Control
+          className="bg-primary mb-3"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -57,8 +62,9 @@ export const SignupView = () => {
         />
       </Form.Group>
       <Form.Group controlId="formEmail">
-        <Form.Label>Email: </Form.Label>
+        <Form.Label>Email</Form.Label>
         <Form.Control
+          className="bg-primary mb-3"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -66,8 +72,9 @@ export const SignupView = () => {
         />
       </Form.Group>
       <Form.Group controlId="formBirthday">
-        <Form.Label>Birthday: </Form.Label>
+        <Form.Label>Birthday</Form.Label>
         <Form.Control
+          className="bg-primary mb-3"
           type="date"
           value={birthday}
           onChange={(e) => setBirthday(e.target.value)}
