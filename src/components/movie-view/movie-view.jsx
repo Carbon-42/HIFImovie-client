@@ -6,9 +6,9 @@ export const MovieView = ({ movie, onBackClick }) => {
   const [genreName, genreDescription] = movie.genre;
   const [directorName, directorBio] = movie.director;
   return (
-    <Row className="justify-content-md-center" sm={1} md={2}>
+    <Row className="justify-content-md-center" xs={1} sm={1} md={2}>
       <Col>
-        <div>
+        <div style={{ border: "10px solid black" }}>
           <img src={movie.image} className="w-100" />
         </div>
       </Col>
