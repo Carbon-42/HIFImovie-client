@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import "../../index.scss";
 
 export const SignupView = () => {
   const [username, setUsername] = useState("");
@@ -32,48 +35,55 @@ export const SignupView = () => {
     });
   };
   return (
-    <form onSubmit={handleSubmit}>
-      Create an Account
-      <br></br>
-      <label>
-        Username:
-        <input
+    <Form className="border border-5 p-3" onSubmit={handleSubmit}>
+      <Form.Label className="fw-bold fs-5 text-decoration-underline mb-4">
+        SIGNUP
+      </Form.Label>
+      <Form.Group controlId="formUsername">
+        <Form.Label>Username</Form.Label>
+        <Form.Control
+          className="bg-primary mb-3"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
           minLength={3}
         />
-      </label>
-      <label>
-        Password:
-        <input
+      </Form.Group>
+      <Form.Group controlId="formPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control
+          className="bg-primary mb-3"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
           minLength={5}
         />
-      </label>
-      <label>
-        Email:
-        <input
+      </Form.Group>
+      <Form.Group controlId="formEmail">
+        <Form.Label>Email</Form.Label>
+        <Form.Control
+          className="bg-primary mb-3"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Birthday:
-        <input
+      </Form.Group>
+      <Form.Group controlId="formBirthday">
+        <Form.Label>Birthday</Form.Label>
+        <Form.Control
+          className="bg-primary mb-3"
           type="date"
           value={birthday}
           onChange={(e) => setBirthday(e.target.value)}
           required
         />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
   );
 };

@@ -1,10 +1,13 @@
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import "../../index.scss";
 
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (event) => {
-    //this prevents the default behavior of the form which is to reload the entire page
+    //this prevents the default behavior of the FormData which is to reload the entire page
     event.preventDefault();
 
     const data = {
@@ -34,27 +37,34 @@ export const LoginView = ({ onLoggedIn }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      Login:
-      <br></br>
-      <label>
-        Username:
-        <input
+    <Form className="border border-5 p-3" onSubmit={handleSubmit}>
+      <Form.Label className="fw-bold fs-5 text-decoration-underline mb-4">
+        LOGIN
+      </Form.Label>
+      <Form.Group controlId="formUsername">
+        <Form.Label className="fw-medium">Username</Form.Label>
+        <Form.Control
+          className="bg-primary mb-3"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          required
+          minLength={3}
         />
-      </label>
-      <label>
-        Password:
-        <input
+      </Form.Group>
+      <Form.Group controlId="formPassword">
+        <Form.Label className="fw-medium">Password</Form.Label>
+        <Form.Control
+          className="bg-primary mb-3"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
   );
 };
