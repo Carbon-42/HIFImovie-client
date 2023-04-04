@@ -11,8 +11,8 @@ export const LoginView = ({ onLoggedIn }) => {
     event.preventDefault();
 
     const data = {
-      Username: username,
-      Password: password,
+      username: username,
+      password: password,
     };
 
     fetch("https://hifi-movie-api.onrender.com/login", {
