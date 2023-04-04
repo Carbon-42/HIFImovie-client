@@ -3,6 +3,7 @@ import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
+import { ProfileView } from "../profile-view/profile-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Row from "react-bootstrap/Row";
@@ -14,6 +15,11 @@ export const MainView = () => {
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [movies, setMovies] = useState([]);
+
+  const updateUser = (user) => {
+    setUser(user);
+    localStorage.setItem("user", JSON.stringify(user));
+  };
 
   useEffect(() => {
     if (!token) return;
@@ -76,6 +82,24 @@ export const MainView = () => {
                         setUser(user);
                         setToken(token);
                       }}
+                    />
+                  </Col>
+                )}
+              </>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <>
+                {!user ? (
+                  <Navigate to="/login" replace />
+                ) : (
+                  <Col>
+                    <ProfileView
+                      user={user}
+                      token={token}
+                      updateUser={updateUser}
                     />
                   </Col>
                 )}
