@@ -3,6 +3,7 @@ import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 import "./movie-view.scss";
+import { Button } from "react-bootstrap";
 
 export const MovieView = ({ movies }) => {
   const { movieId } = useParams();
@@ -16,6 +17,9 @@ export const MovieView = ({ movies }) => {
         <div className="img" style={{ border: "10px solid black" }}>
           <img src={movie.image} className="w-100" />
         </div>
+        <Button className="bg-secondary" variant="primary">
+          Add to Favorites
+        </Button>
       </Col>
       <Col>
         <div>
