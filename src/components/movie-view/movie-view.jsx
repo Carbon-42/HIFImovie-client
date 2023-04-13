@@ -4,12 +4,29 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 import "./movie-view.scss";
 import { Button } from "react-bootstrap";
+import { useEffect } from "react";
 
-export const MovieView = ({ movies }) => {
+export const MovieView = ({
+  movies,
+  handleFavMovies,
+  setSelectedMovie,
+  selectedMovie,
+}) => {
   const { movieId } = useParams();
   const movie = movies.find((m) => m.id === movieId);
   const [genreName, genreDescription] = movie.genre;
   const [directorName, directorBio] = movie.director;
+
+  useEffect(() => {
+    setSelectedMovie(movieId);
+  });
+
+  console.log(selectedMovie);
+  const handleClick = () => {
+    // event.preventDefault();
+    // setSelectedMovie(movieId);
+    handleFavMovies();
+  };
 
   return (
     <Row className="justify-content-md-center" xs={1} sm={1} md={2}>
@@ -17,7 +34,11 @@ export const MovieView = ({ movies }) => {
         <div className="img" style={{ border: "10px solid black" }}>
           <img src={movie.image} className="w-100" />
         </div>
-        <Button className="bg-secondary" variant="primary">
+        <Button
+          className="bg-secondary"
+          variant="primary"
+          onClick={handleClick}
+        >
           Add to Favorites
         </Button>
       </Col>
