@@ -6,8 +6,11 @@ import Col from "react-bootstrap/Col";
 import "../../index.scss";
 import { MovieCard } from "../movie-card/movie-card";
 
-export const ProfileView = ({ user, token, movies, favMovies }) => {
-  console.log("favMovies", favMovies);
+export const ProfileView = ({ user, token, favMovies }) => {
+  // console.log("user", user);
+
+  const displayBirthday = user.birthday.slice(0, 10);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -34,13 +37,13 @@ export const ProfileView = ({ user, token, movies, favMovies }) => {
     <div>
       <Row>
         <Card className="bg-primary border border-5 p-4">
-          <Card.Title className="fw-bold fs-5 text-decoration-underline mb-4">
+          <Card.Title className="fw-bold fs-5 text-decoration-underline mb-4 ms-3">
             USER PROFILE
           </Card.Title>
           <Card.Body className="bg-primary mb-3">
             <Card.Text>Username: {user.username}</Card.Text>
             <Card.Text>Email: {user.email}</Card.Text>
-            <Card.Text>Birthday: {user.birthday}</Card.Text>
+            <Card.Text>Birthday: {displayBirthday}</Card.Text>
             <Button
               as={Link}
               to="/updateprofile"
@@ -64,11 +67,17 @@ export const ProfileView = ({ user, token, movies, favMovies }) => {
         <Card.Title className="fw-bold fs-5 text-decoration-underline mb-4">
           FAVORITE MOVIES
         </Card.Title>
-        {favMovies.map((movie) => (
-          <Col key={movie.id} className="mb-5" sm={6} md={6} lg={4}>
-            <MovieCard key={movie.id} movie={movie} />
-          </Col>
-        ))}
+        {favMovies.length === 0 ? (
+          <Col>You have not choosen any favorite movies.</Col>
+        ) : (
+          <>
+            {favMovies.map((movie) => (
+              <Col key={movie.id} className="mb-5" sm={6} md={6} lg={4}>
+                <MovieCard key={movie.id} movie={movie} />
+              </Col>
+            ))}
+          </>
+        )}
       </Row>
     </div>
   );
