@@ -6,7 +6,8 @@ import Col from "react-bootstrap/Col";
 import "../../index.scss";
 import { MovieCard } from "../movie-card/movie-card";
 
-export const ProfileView = ({ user, token, movies }) => {
+export const ProfileView = ({ user, token, movies, favMovies }) => {
+  console.log("favMovies", favMovies);
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -19,6 +20,9 @@ export const ProfileView = ({ user, token, movies }) => {
     }).then((response) => {
       if (response.ok) {
         alert("Profile removed successfully");
+        localStorage.clear(user);
+        localStorage.clear(token);
+        window.location.assign("/");
         console.log(response);
       } else {
         alert("Update failed");
@@ -26,7 +30,6 @@ export const ProfileView = ({ user, token, movies }) => {
       }
     });
   };
-
   return (
     <div>
       <Row>
@@ -61,8 +64,8 @@ export const ProfileView = ({ user, token, movies }) => {
         <Card.Title className="fw-bold fs-5 text-decoration-underline mb-4">
           FAVORITE MOVIES
         </Card.Title>
-        {movies.map((movie) => (
-          <Col className="mb-5" sm={6} md={6} lg={4}>
+        {favMovies.map((movie) => (
+          <Col key={movie.id} className="mb-5" sm={6} md={6} lg={4}>
             <MovieCard key={movie.id} movie={movie} />
           </Col>
         ))}
