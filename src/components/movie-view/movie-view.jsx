@@ -32,10 +32,12 @@ export const MovieView = ({
 
   return (
     <Row className="justify-content-md-center" xs={1} sm={1} md={2}>
-      <Col>
+      <Col className="mb-5">
         <div className="img" style={{ border: "10px solid black" }}>
           <img src={movie.image} className="w-100" />
         </div>
+      </Col>
+      <Col>
         <Button
           className="bg-secondary"
           variant="primary"
@@ -50,8 +52,6 @@ export const MovieView = ({
         >
           Remove from Favorites
         </Button>
-      </Col>
-      <Col>
         <div>
           <span className="fw-bold fs-3 text-decoration-underline">Movie</span>
           <br></br>
@@ -84,12 +84,6 @@ export const MovieView = ({
           <span className="fw-bold fs-5">Bio: </span>
           <span>{directorBio}</span>
         </div>
-        <br></br>
-        <Link to="/">
-          <button className="back-button" style={{ cursor: "pointer" }}>
-            Back
-          </button>
-        </Link>
       </Col>
     </Row>
   );
