@@ -38,11 +38,13 @@ export const UpdateView = ({ user, token, setUser }) => {
       .then((result) => {
         alert("Update successful");
         updateUser(data);
-        console.log(result);
+        const user = JSON.parse(result);
+        localStorage.setItem("favoriteMovies", user.favoriteMovies);
+        window.location.assign("/profile");
       })
-      //   .then(window.location.assign("/profile"))
       .catch((error) => {
         alert("Update failed");
+        window.location.reload();
         console.log("error", error);
       });
   };
