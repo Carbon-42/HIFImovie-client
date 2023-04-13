@@ -17,7 +17,9 @@ export const MainView = () => {
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
-  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const [favoriteMovies, setFavoriteMovies] = useState(
+    localStorage.getItem("favoriteMovies")
+  );
 
   //filter favorite movies
   const favMovies = movies.filter((movie) => favoriteMovies.includes(movie.id));
