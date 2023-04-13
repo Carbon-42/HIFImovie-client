@@ -9,8 +9,8 @@ import { useEffect } from "react";
 export const MovieView = ({
   movies,
   handleFavMovies,
+  handleRemoveMovies,
   setSelectedMovie,
-  selectedMovie,
 }) => {
   const { movieId } = useParams();
   const movie = movies.find((m) => m.id === movieId);
@@ -21,9 +21,13 @@ export const MovieView = ({
     setSelectedMovie(movieId);
   });
 
-  console.log(selectedMovie);
-  const handleClick = () => {
+  // console.log(selectedMovie);
+  const handleAddfavorite = () => {
     handleFavMovies();
+  };
+
+  const handleRemovefavorite = () => {
+    handleRemoveMovies();
   };
 
   return (
@@ -35,9 +39,16 @@ export const MovieView = ({
         <Button
           className="bg-secondary"
           variant="primary"
-          onClick={handleClick}
+          onClick={handleAddfavorite}
         >
           Add to Favorites
+        </Button>
+        <Button
+          className="bg-secondary"
+          variant="primary"
+          onClick={handleRemovefavorite}
+        >
+          Remove from Favorites
         </Button>
       </Col>
       <Col>
