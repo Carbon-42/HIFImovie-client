@@ -23,8 +23,6 @@ export const MovieView = ({
 
   console.log(selectedMovie);
   const handleClick = () => {
-    // event.preventDefault();
-    // setSelectedMovie(movieId);
     handleFavMovies();
   };
 
