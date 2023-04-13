@@ -16,7 +16,48 @@ export const MainView = () => {
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [favoriteMovies, setFavoriteMovies] = useState([]);
 
+  const favMovies = movies.filter((movie) => favoriteMovies.includes(movie.id));
+
+  console.log("selectedMovie", selectedMovie);
+  console.log("favoriteMovies", favoriteMovies);
+  console.log("favMovies", favMovies);
+  // console.log(user);
+
+  //put, delete, filter favorite movies
+  const handleFavMovies = () => {
+    console.log("posted", selectedMovie);
+    const data = {
+      selectedMovie: selectedMovie,
+    };
+
+    fetch(
+      `https://hifi-movie-api.onrender.com/users/${user.username}/movies/${selectedMovie}`,
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        alert("Update successful");
+        setFavoriteMovies(result.favoriteMovies);
+        console.log("user", result);
+        console.log("result", result.favoriteMovies);
+      })
+      .catch((error) => {
+        alert("Update failed");
+        console.log("error", error);
+      });
+  };
+
+  //fetch movies from database
   useEffect(() => {
     if (!token) return;
 
@@ -39,6 +80,7 @@ export const MainView = () => {
       });
   }, [token]);
 
+  //view rendered conditions
   return (
     <BrowserRouter>
       <NavigationBar
@@ -77,6 +119,7 @@ export const MainView = () => {
                       onLoggedIn={(user, token) => {
                         setUser(user);
                         setToken(token);
+                        setFavoriteMovies(user.favoriteMovies);
                       }}
                     />
                   </Col>
@@ -92,7 +135,13 @@ export const MainView = () => {
                   <Navigate to="/login" replace />
                 ) : (
                   <Col md={7}>
-                    <ProfileView user={user} token={token} setUser={setUser} />
+                    <ProfileView
+                      user={user}
+                      token={token}
+                      setUser={setUser}
+                      movies={movies}
+                      favMovies={favMovies}
+                    />
                   </Col>
                 )}
               </>
@@ -122,7 +171,13 @@ export const MainView = () => {
                   <Col>The list is empty</Col>
                 ) : (
                   <Col>
-                    <MovieView movies={movies} />
+                    <MovieView
+                      movies={movies}
+                      handleFavMovies={handleFavMovies}
+                      user={user}
+                      setSelectedMovie={setSelectedMovie}
+                      selectedMovie={selectedMovie}
+                    />
                   </Col>
                 )}
               </>
