@@ -11,8 +11,8 @@ export const LoginView = ({ onLoggedIn }) => {
     event.preventDefault();
 
     const data = {
-      Username: username,
-      Password: password,
+      username: username,
+      password: password,
     };
 
     fetch("https://hifi-movie-api.onrender.com/login", {
@@ -22,11 +22,11 @@ export const LoginView = ({ onLoggedIn }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Login response: ", data.user);
         if (data.user) {
           localStorage.setItem("user", JSON.stringify(data.user));
           localStorage.setItem("token", data.token);
-          onLoggedIn(data.user, data.token);
+          localStorage.setItem("favoriteMovies", data.user.favoriteMovies);
+          onLoggedIn(data.user, data.token, data.user.favoriteMovies);
         } else {
           alert("Username or password are incorrect.");
         }
@@ -62,7 +62,7 @@ export const LoginView = ({ onLoggedIn }) => {
           required
         />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button className="bg-secondary" variant="primary" type="submit">
         Submit
       </Button>
     </Form>

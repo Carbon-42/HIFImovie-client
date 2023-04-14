@@ -13,10 +13,10 @@ export const SignupView = () => {
     event.preventDefault();
 
     const data = {
-      Username: username,
-      Password: password,
-      Email: email,
-      Birthday: birthday,
+      username: username,
+      password: password,
+      email: email,
+      birthday: birthday,
     };
 
     fetch("https://hifi-movie-api.onrender.com/users", {
@@ -28,7 +28,7 @@ export const SignupView = () => {
     }).then((response) => {
       if (response.ok) {
         alert("Signup successful");
-        window.location.reload();
+        window.location.assign("/");
       } else {
         alert("Signup failed");
       }
@@ -81,7 +81,7 @@ export const SignupView = () => {
           required
         />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button className="bg-secondary" variant="primary" type="submit">
         Submit
       </Button>
     </Form>

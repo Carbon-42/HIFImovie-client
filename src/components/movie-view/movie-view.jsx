@@ -1,18 +1,57 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router";
 import "./movie-view.scss";
+import { Button } from "react-bootstrap";
+import { useEffect } from "react";
 
-export const MovieView = ({ movie, onBackClick }) => {
+export const MovieView = ({
+  movies,
+  handleFavMovies,
+  handleRemoveMovies,
+  setSelectedMovie,
+}) => {
+  const { movieId } = useParams();
+  const movie = movies.find((m) => m.id === movieId);
   const [genreName, genreDescription] = movie.genre;
   const [directorName, directorBio] = movie.director;
+
+  useEffect(() => {
+    setSelectedMovie(movieId);
+  });
+
+  // console.log(selectedMovie);
+  const handleAddfavorite = () => {
+    handleFavMovies();
+  };
+
+  const handleRemovefavorite = () => {
+    handleRemoveMovies();
+  };
+
   return (
     <Row className="justify-content-md-center" xs={1} sm={1} md={2}>
-      <Col>
+      <Col className="mb-5">
         <div className="img" style={{ border: "10px solid black" }}>
           <img src={movie.image} className="w-100" />
         </div>
       </Col>
       <Col>
+        <Button
+          className="bg-secondary"
+          variant="primary"
+          onClick={handleAddfavorite}
+        >
+          Add to Favorites
+        </Button>
+        <Button
+          className="bg-secondary"
+          variant="primary"
+          onClick={handleRemovefavorite}
+        >
+          Remove from Favorites
+        </Button>
         <div>
           <span className="fw-bold fs-3 text-decoration-underline">Movie</span>
           <br></br>
@@ -45,14 +84,6 @@ export const MovieView = ({ movie, onBackClick }) => {
           <span className="fw-bold fs-5">Bio: </span>
           <span>{directorBio}</span>
         </div>
-        <br></br>
-        <button
-          onClick={onBackClick}
-          className="back-button"
-          style={{ cursor: "pointer" }}
-        >
-          Back
-        </button>
       </Col>
     </Row>
   );
