@@ -1,3 +1,8 @@
+#movieCard {
+  background: #f5f5f5;
+  border: none;
+}
+
 .card-img {
   border: 10px solid #000;
 }
