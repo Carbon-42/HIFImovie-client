@@ -20,6 +20,7 @@ export const MainView = () => {
   const [favoriteMovies, setFavoriteMovies] = useState(
     localStorage.getItem("favoriteMovies")
   );
+  const [viewMovies, setViewMovies] = useState([]);
 
   //filter favorite movies
   const favMovies = movies.filter((movie) => favoriteMovies.includes(movie.id));
@@ -97,7 +98,7 @@ export const MainView = () => {
           return {
             id: movie._id,
             image: movie.image,
-            title: movie.title,
+            title: movie.title.toLowerCase(),
             description: movie.description,
             genre: [movie.genre.name, movie.genre.description],
             director: [movie.director.name, movie.director.bio],
@@ -106,6 +107,10 @@ export const MainView = () => {
         setMovies(moviesFromApi);
       });
   }, [token]);
+
+  useEffect(() => {
+    setViewMovies(movies);
+  }, [movies]);
 
   //view rendered conditions
   return (
@@ -116,6 +121,13 @@ export const MainView = () => {
           setUser(null);
           setToken(null);
           localStorage.clear();
+        }}
+        onSearch={(query) => {
+          setViewMovies(
+            movies.filter((movie) =>
+              movie.title.toLowerCase().includes(query.toLowerCase())
+            )
+          );
         }}
       />
       <Row className="justify-content-md-center">
@@ -218,10 +230,10 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The list is empty</Col>
+                  <Col>Loading...</Col>
                 ) : (
                   <>
-                    {movies.map((movie) => (
+                    {viewMovies.map((movie) => (
                       <Col className="mb-5" key={movie.id} sm={6} md={6} lg={3}>
                         <MovieCard
                           key={movie.id}
