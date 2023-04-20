@@ -37,7 +37,7 @@ export const MovieView = ({
           <img src={movie.image} className="w-100" />
         </div>
       </Col>
-      <Col>
+      <Col className="mb-5">
         <Button
           className="bg-secondary"
           variant="primary"
@@ -52,7 +52,7 @@ export const MovieView = ({
         >
           Remove from Favorites
         </Button>
-        <div>
+        <div className="mt-3">
           <span className="fw-bold fs-3 text-decoration-underline">Movie</span>
           <br></br>
           <span className="fw-bold fs-5">Title: </span>

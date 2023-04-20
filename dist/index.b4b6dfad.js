@@ -46474,6 +46474,7 @@ const MovieView = ({ movies , handleFavMovies , handleRemoveMovies , setSelected
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+                className: "mb-5",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
                         className: "bg-secondary",
@@ -46496,6 +46497,7 @@ const MovieView = ({ movies , handleFavMovies , handleRemoveMovies , setSelected
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "mt-3",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 className: "fw-bold fs-3 text-decoration-underline",
@@ -47107,7 +47109,15 @@ const ProfileView = ({ user , token , favMovies  })=>{
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
                                     children: [
-                                        "Username: ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "fw-bold",
+                                            children: "Username:"
+                                        }, void 0, false, {
+                                            fileName: "src/components/profile-view/profile-view.jsx",
+                                            lineNumber: 43,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        " ",
                                         user.username
                                     ]
                                 }, void 0, true, {
@@ -47117,22 +47127,38 @@ const ProfileView = ({ user , token , favMovies  })=>{
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
                                     children: [
-                                        "Email: ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "fw-bold",
+                                            children: "Email:"
+                                        }, void 0, false, {
+                                            fileName: "src/components/profile-view/profile-view.jsx",
+                                            lineNumber: 46,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        " ",
                                         user.email
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/profile-view/profile-view.jsx",
-                                    lineNumber: 43,
+                                    lineNumber: 45,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
                                     children: [
-                                        "Birthday: ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "fw-bold",
+                                            children: "Birthday:"
+                                        }, void 0, false, {
+                                            fileName: "src/components/profile-view/profile-view.jsx",
+                                            lineNumber: 49,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        " ",
                                         displayBirthday
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/profile-view/profile-view.jsx",
-                                    lineNumber: 44,
+                                    lineNumber: 48,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
@@ -47143,7 +47169,7 @@ const ProfileView = ({ user , token , favMovies  })=>{
                                     children: "Edit Profile"
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/profile-view.jsx",
-                                    lineNumber: 45,
+                                    lineNumber: 51,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
@@ -47153,7 +47179,7 @@ const ProfileView = ({ user , token , favMovies  })=>{
                                     children: "Delete Profile"
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/profile-view.jsx",
-                                    lineNumber: 53,
+                                    lineNumber: 59,
                                     columnNumber: 13
                                 }, undefined)
                             ]
@@ -47181,14 +47207,14 @@ const ProfileView = ({ user , token , favMovies  })=>{
                         children: "FAVORITE MOVIES"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 64,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, undefined),
                     favMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                         children: "You have not choosen any favorite movies."
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 68,
+                        lineNumber: 74,
                         columnNumber: 11
                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                         children: favMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
@@ -47200,19 +47226,19 @@ const ProfileView = ({ user , token , favMovies  })=>{
                                     movie: movie
                                 }, movie.id, false, {
                                     fileName: "src/components/profile-view/profile-view.jsx",
-                                    lineNumber: 73,
+                                    lineNumber: 79,
                                     columnNumber: 17
                                 }, undefined)
                             }, movie.id, false, {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 72,
+                                lineNumber: 78,
                                 columnNumber: 15
                             }, undefined))
                     }, void 0, false)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 63,
+                lineNumber: 69,
                 columnNumber: 7
             }, undefined)
         ]
@@ -47326,7 +47352,7 @@ const UpdateView = ({ user , token , setUser  })=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
-                            className: "mb-3",
+                            className: "mb-4",
                             type: "text",
                             value: username,
                             placeholder: user.username,
@@ -47354,7 +47380,7 @@ const UpdateView = ({ user , token , setUser  })=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
-                            className: "mb-3",
+                            className: "mb-4",
                             type: "password",
                             value: password,
                             onChange: (e)=>setPassword(e.target.value),
@@ -47381,7 +47407,7 @@ const UpdateView = ({ user , token , setUser  })=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
-                            className: "mb-3",
+                            className: "mb-4",
                             type: "email",
                             value: email,
                             placeholder: user.email,
@@ -47408,7 +47434,7 @@ const UpdateView = ({ user , token , setUser  })=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
-                            className: "bg-primary mb-3",
+                            className: "bg-primary mb-4",
                             type: "date",
                             value: birthday,
                             placeholder: user.birthday,

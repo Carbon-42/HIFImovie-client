@@ -39,9 +39,15 @@ export const ProfileView = ({ user, token, favMovies }) => {
             USER PROFILE
           </Card.Title>
           <Card.Body className="bg-primary mb-3">
-            <Card.Text>Username: {user.username}</Card.Text>
-            <Card.Text>Email: {user.email}</Card.Text>
-            <Card.Text>Birthday: {displayBirthday}</Card.Text>
+            <Card.Text>
+              <span className="fw-bold">Username:</span> {user.username}
+            </Card.Text>
+            <Card.Text>
+              <span className="fw-bold">Email:</span> {user.email}
+            </Card.Text>
+            <Card.Text>
+              <span className="fw-bold">Birthday:</span> {displayBirthday}
+            </Card.Text>
             <Button
               as={Link}
               to="/updateprofile"
