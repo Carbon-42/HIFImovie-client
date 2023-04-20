@@ -7,8 +7,6 @@ import "../../index.scss";
 import { MovieCard } from "../movie-card/movie-card";
 
 export const ProfileView = ({ user, token, favMovies }) => {
-  // console.log("user", user);
-
   const displayBirthday = user.birthday.slice(0, 10);
 
   const handleSubmit = (event) => {
@@ -35,9 +33,9 @@ export const ProfileView = ({ user, token, favMovies }) => {
   };
   return (
     <div>
-      <Row>
+      <Row className="mb-2">
         <Card className="bg-primary border border-5 p-4">
-          <Card.Title className="fw-bold fs-5 text-decoration-underline mb-4 ms-3">
+          <Card.Title className="fw-bold fs-5 text-decoration-underline mb-3 ms-3">
             USER PROFILE
           </Card.Title>
           <Card.Body className="bg-primary mb-3">
@@ -47,12 +45,11 @@ export const ProfileView = ({ user, token, favMovies }) => {
             <Button
               as={Link}
               to="/updateprofile"
-              className="bg-secondary"
+              className="bg-secondary me-1"
               variant="primary"
             >
               Edit Profile
             </Button>
-            <br />
             <Button
               className="bg-secondary"
               variant="primary"
@@ -72,7 +69,7 @@ export const ProfileView = ({ user, token, favMovies }) => {
         ) : (
           <>
             {favMovies.map((movie) => (
-              <Col key={movie.id} className="mb-5" sm={6} md={6} lg={4}>
+              <Col key={movie.id} className="mb-3" sm={6} md={6} lg={4}>
                 <MovieCard key={movie.id} movie={movie} />
               </Col>
             ))}
