@@ -1,17 +1,28 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { useEffect } from "react";
 
 export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
   const [query, setQuery] = useState("");
+  const [homeView, setHomeView] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
     onSearch(query);
   }, [query]);
+
+  //checks Route before rendering search input field
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setHomeView("true");
+    } else {
+      setHomeView(null);
+    }
+  }, [location]);
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
@@ -46,7 +57,7 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
               </>
             )}
           </Nav>
-          {user && (
+          {homeView && (
             <>
               <Form className="d-flex">
                 <Form.Control
