@@ -59,7 +59,7 @@ export const UpdateView = ({ user, token, setUser }) => {
         <Form.Group className="mt-4" controlId="formUsername">
           <Form.Label>Username</Form.Label>
           <Form.Control
-            className="bg-primary mb-3"
+            className="mb-3"
             type="text"
             value={username}
             placeholder={user.username}
@@ -70,7 +70,7 @@ export const UpdateView = ({ user, token, setUser }) => {
         <Form.Group controlId="formPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            className="bg-primary mb-3"
+            className="mb-3"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -80,7 +80,7 @@ export const UpdateView = ({ user, token, setUser }) => {
         <Form.Group controlId="formEmail">
           <Form.Label>Email</Form.Label>
           <Form.Control
-            className="bg-primary mb-3"
+            className="mb-3"
             type="email"
             value={email}
             placeholder={user.email}

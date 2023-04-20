@@ -47326,7 +47326,7 @@ const UpdateView = ({ user , token , setUser  })=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
-                            className: "bg-primary mb-3",
+                            className: "mb-3",
                             type: "text",
                             value: username,
                             placeholder: user.username,
@@ -47354,7 +47354,7 @@ const UpdateView = ({ user , token , setUser  })=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
-                            className: "bg-primary mb-3",
+                            className: "mb-3",
                             type: "password",
                             value: password,
                             onChange: (e)=>setPassword(e.target.value),
@@ -47381,7 +47381,7 @@ const UpdateView = ({ user , token , setUser  })=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
-                            className: "bg-primary mb-3",
+                            className: "mb-3",
                             type: "email",
                             value: email,
                             placeholder: user.email,
