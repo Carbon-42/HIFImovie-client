@@ -1,10 +1,11 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Link } from "react-router-dom";
+import Alert from "react-bootstrap/Alert";
 import { useParams } from "react-router";
 import "./movie-view.scss";
 import { Button } from "react-bootstrap";
 import { useEffect } from "react";
+import { AlertBox } from "../alert-box/alert-box";
 
 export const MovieView = ({
   movies,
@@ -32,12 +33,17 @@ export const MovieView = ({
 
   return (
     <Row className="justify-content-md-center" xs={1} sm={1} md={2}>
-      <Col className="mb-5">
+      <Col
+        className="mb-5"
+        xs={{ span: 8, offset: 2 }}
+        sm={{ span: 8, offset: 2 }}
+        md={{ span: 4, offset: 0 }}
+      >
         <div className="img" style={{ border: "10px solid black" }}>
           <img src={movie.image} className="w-100" />
         </div>
       </Col>
-      <Col>
+      <Col className="mb-5" md={{ offset: 1 }} lg={{ offset: 1 }}>
         <Button
           className="bg-secondary"
           variant="primary"
@@ -52,7 +58,7 @@ export const MovieView = ({
         >
           Remove from Favorites
         </Button>
-        <div>
+        <div className="mt-3">
           <span className="fw-bold fs-3 text-decoration-underline">Movie</span>
           <br></br>
           <span className="fw-bold fs-5">Title: </span>

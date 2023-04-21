@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "../../index.scss";
 
-export const SignupView = () => {
+export const SignupView = ({ setAlert }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -27,10 +27,9 @@ export const SignupView = () => {
       },
     }).then((response) => {
       if (response.ok) {
-        alert("Signup successful");
-        window.location.assign("/");
+        setAlert("Signup successful! Please login.");
       } else {
-        alert("Signup failed");
+        setAlert("Signup failed");
       }
     });
   };
