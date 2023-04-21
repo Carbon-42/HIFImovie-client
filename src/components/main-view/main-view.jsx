@@ -142,7 +142,7 @@ export const MainView = () => {
         setModalShow={setModalShow}
         modalShow={modalShow}
       />
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-md-center" sm={1}>
         <Routes>
           <Route
             path="/signup"
