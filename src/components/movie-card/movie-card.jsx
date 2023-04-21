@@ -1,5 +1,5 @@
 import Proptypes from "prop-types";
-import { Accordion, Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./movie-card.scss";
 
