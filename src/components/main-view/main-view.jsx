@@ -254,10 +254,10 @@ export const MainView = () => {
                   <>
                     {viewMovies.map((movie) => (
                       <Col
+                        key={movie.id}
                         className="mb-5"
                         xs={{ span: 8, offset: 2 }}
                         sm={{ span: 8, offset: 2 }}
-                        key={movie.id}
                         md={{ span: 6, offset: 0 }}
                         lg={3}
                       >
