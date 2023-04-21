@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "../../index.scss";
 
-export const UpdateView = ({ user, token, setUser }) => {
+export const UpdateView = ({ user, token, setUser, setAlert }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -36,14 +36,13 @@ export const UpdateView = ({ user, token, setUser }) => {
     })
       .then((response) => response.text())
       .then((result) => {
-        alert("Update successful");
+        setAlert("Update successful!");
         updateUser(data);
         const user = JSON.parse(result);
         localStorage.setItem("favoriteMovies", user.favoriteMovies);
-        window.location.assign("/profile");
       })
       .catch((error) => {
-        alert("Update failed");
+        setAlert("Update failed");
         window.location.reload();
         console.log("error", error);
       });
@@ -65,6 +64,7 @@ export const UpdateView = ({ user, token, setUser }) => {
             placeholder={user.username}
             onChange={(e) => setUsername(e.target.value)}
             minLength={3}
+            required
           />
         </Form.Group>
         <Form.Group controlId="formPassword">
@@ -75,6 +75,7 @@ export const UpdateView = ({ user, token, setUser }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             minLength={5}
+            required
           />
         </Form.Group>
         <Form.Group controlId="formEmail">
@@ -85,6 +86,7 @@ export const UpdateView = ({ user, token, setUser }) => {
             value={email}
             placeholder={user.email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </Form.Group>
         <Form.Group controlId="formBirthday">
@@ -95,6 +97,7 @@ export const UpdateView = ({ user, token, setUser }) => {
             value={birthday}
             placeholder={user.birthday}
             onChange={(e) => setBirthday(e.target.value)}
+            required
           />
         </Form.Group>
         <Button className="bg-secondary" variant="primary" type="submit">

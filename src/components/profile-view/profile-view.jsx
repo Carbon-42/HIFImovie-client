@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import "../../index.scss";
 import { MovieCard } from "../movie-card/movie-card";
 
-export const ProfileView = ({ user, token, favMovies }) => {
+export const ProfileView = ({ user, token, favMovies, setAlert }) => {
   const displayBirthday = user.birthday.slice(0, 10);
 
   const handleSubmit = (event) => {
@@ -20,10 +20,9 @@ export const ProfileView = ({ user, token, favMovies }) => {
       },
     }).then((response) => {
       if (response.ok) {
-        alert("Profile removed successfully");
+        setAlert("Profile removed successfully. Sorry to see you go!");
         localStorage.clear(user);
         localStorage.clear(token);
-        window.location.assign("/");
         console.log(response);
       } else {
         alert("Update failed");

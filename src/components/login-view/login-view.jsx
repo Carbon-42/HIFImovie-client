@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "../../index.scss";
 
-export const LoginView = ({ onLoggedIn }) => {
+export const LoginView = ({ onLoggedIn, setAlert }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (event) => {
@@ -28,11 +28,11 @@ export const LoginView = ({ onLoggedIn }) => {
           localStorage.setItem("favoriteMovies", data.user.favoriteMovies);
           onLoggedIn(data.user, data.token, data.user.favoriteMovies);
         } else {
-          alert("Username or password are incorrect.");
+          setAlert("Username or password are incorrect.");
         }
       })
       .catch((e) => {
-        alert("Something went wrong");
+        setAlert("Something went wrong");
       });
   };
 
