@@ -31,7 +31,11 @@ export const ProfileView = ({ user, token, favMovies, setAlert }) => {
     });
   };
   return (
-    <div>
+    <Col
+      xs={{ span: 10, offset: 1 }}
+      sm={{ span: 10, offset: 1 }}
+      md={{ span: 10, offset: 0 }}
+    >
       <Row className="mb-2">
         <Card className="bg-primary border border-5 p-4">
           <Card.Title className="fw-bold fs-5 text-decoration-underline mb-3 ms-3">
@@ -74,13 +78,20 @@ export const ProfileView = ({ user, token, favMovies, setAlert }) => {
         ) : (
           <>
             {favMovies.map((movie) => (
-              <Col key={movie.id} className="mb-3" sm={6} md={6} lg={4}>
+              <Col
+                key={movie.id}
+                className="mb-3"
+                xs={{ span: 8, offset: 2 }}
+                sm={{ span: 8, offset: 2 }}
+                md={{ span: 6, offset: 0 }}
+                lg={4}
+              >
                 <MovieCard key={movie.id} movie={movie} />
               </Col>
             ))}
           </>
         )}
       </Row>
-    </div>
+    </Col>
   );
 };

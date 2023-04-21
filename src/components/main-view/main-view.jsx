@@ -142,7 +142,7 @@ export const MainView = () => {
         setModalShow={setModalShow}
         modalShow={modalShow}
       />
-      <Row className="justify-content-md-center" md={2}>
+      <Row className="justify-content-md-center">
         <Routes>
           <Route
             path="/signup"
@@ -186,16 +186,16 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : (
-                  <Col md={7}>
-                    <ProfileView
-                      user={user}
-                      token={token}
-                      setUser={setUser}
-                      movies={movies}
-                      favMovies={favMovies}
-                      setAlert={setAlert}
-                    />
-                  </Col>
+                  // <Col>
+                  <ProfileView
+                    user={user}
+                    token={token}
+                    setUser={setUser}
+                    movies={movies}
+                    favMovies={favMovies}
+                    setAlert={setAlert}
+                  />
+                  // </Col>
                 )}
               </>
             }
@@ -255,9 +255,9 @@ export const MainView = () => {
                     {viewMovies.map((movie) => (
                       <Col
                         className="mb-5"
+                        key={movie.id}
                         xs={{ span: 8, offset: 2 }}
                         sm={{ span: 8, offset: 2 }}
-                        key={movie.id}
                         md={{ span: 6, offset: 0 }}
                         lg={3}
                       >

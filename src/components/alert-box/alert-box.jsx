@@ -22,7 +22,7 @@ export const AlertBox = ({ alert, setModalShow, modalShow, setAlert }) => {
 
   return (
     <Modal
-      size="sm"
+      // size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
       show={modalShow}
