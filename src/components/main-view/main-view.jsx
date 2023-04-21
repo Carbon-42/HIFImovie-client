@@ -6,9 +6,12 @@ import { SignupView } from "../signup-view/signup-view";
 import { ProfileView } from "../profile-view/profile-view";
 import { UpdateView } from "../update-view/update-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
+import { AlertBox } from "../alert-box/alert-box";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Alert from "react-bootstrap/Alert";
+import { Modal } from "react-bootstrap";
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -21,6 +24,8 @@ export const MainView = () => {
     localStorage.getItem("favoriteMovies")
   );
   const [viewMovies, setViewMovies] = useState([]);
+  const [alert, setAlert] = useState("");
+  const [modalShow, setModalShow] = useState(false);
 
   //filter favorite movies
   const favMovies = movies.filter((movie) => favoriteMovies.includes(movie.id));
@@ -44,13 +49,13 @@ export const MainView = () => {
     )
       .then((response) => response.json())
       .then((result) => {
-        alert("Update successful");
+        setAlert("Added to Favorites!");
         setFavoriteMovies(result.favoriteMovies);
         console.log("user", result);
         console.log("result", result.favoriteMovies);
       })
       .catch((error) => {
-        alert("Update failed");
+        setAlert("Update failed");
         console.log("error", error);
       });
   };
@@ -74,13 +79,13 @@ export const MainView = () => {
     )
       .then((response) => response.json())
       .then((result) => {
-        alert("Update successful");
+        setAlert("Removed from Favorites!");
         setFavoriteMovies(result.favoriteMovies);
         console.log("user", result);
         console.log("result", result.favoriteMovies);
       })
       .catch((error) => {
-        alert("Update failed");
+        setAlert("Update failed");
         console.log("error", error);
       });
   };
@@ -98,7 +103,7 @@ export const MainView = () => {
           return {
             id: movie._id,
             image: movie.image,
-            title: movie.title.toLowerCase(),
+            title: movie.title,
             description: movie.description,
             genre: [movie.genre.name, movie.genre.description],
             director: [movie.director.name, movie.director.bio],
@@ -130,7 +135,14 @@ export const MainView = () => {
           );
         }}
       />
-      <Row className="justify-content-md-center">
+      <AlertBox
+        alert={alert}
+        setAlert={setAlert}
+        show={modalShow}
+        setModalShow={setModalShow}
+        modalShow={modalShow}
+      />
+      <Row className="justify-content-md-center" md={2}>
         <Routes>
           <Route
             path="/signup"
@@ -140,7 +152,7 @@ export const MainView = () => {
                   <Navigate to="/" />
                 ) : (
                   <Col md={5}>
-                    <SignupView />
+                    <SignupView setAlert={setAlert} />
                   </Col>
                 )}
               </>
@@ -160,6 +172,7 @@ export const MainView = () => {
                         setToken(token);
                         setFavoriteMovies(user.favoriteMovies);
                       }}
+                      setAlert={setAlert}
                     />
                   </Col>
                 )}
@@ -180,6 +193,7 @@ export const MainView = () => {
                       setUser={setUser}
                       movies={movies}
                       favMovies={favMovies}
+                      setAlert={setAlert}
                     />
                   </Col>
                 )}
@@ -194,7 +208,12 @@ export const MainView = () => {
                   <Navigate to="/login" replace />
                 ) : (
                   <Col md={7}>
-                    <UpdateView user={user} token={token} setUser={setUser} />
+                    <UpdateView
+                      user={user}
+                      token={token}
+                      setUser={setUser}
+                      setAlert={setAlert}
+                    />
                   </Col>
                 )}
               </>
@@ -230,11 +249,18 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>Loading...</Col>
+                  <Col>Loading movies ...</Col>
                 ) : (
                   <>
                     {viewMovies.map((movie) => (
-                      <Col className="mb-5" key={movie.id} sm={6} md={6} lg={3}>
+                      <Col
+                        className="mb-5"
+                        xs={{ span: 8, offset: 2 }}
+                        sm={{ span: 8, offset: 2 }}
+                        key={movie.id}
+                        md={{ span: 6, offset: 0 }}
+                        lg={3}
+                      >
                         <MovieCard
                           key={movie.id}
                           movie={movie}
