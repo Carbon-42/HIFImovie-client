@@ -4,7 +4,7 @@
 }
 
 .card-img {
-  border: 10px solid #000;
+  border: 5px solid #000;
 }
 
 :root {
@@ -12021,6 +12021,11 @@ textarea.form-control-lg {
   border: none;
   border-radius: 4px;
   padding: 4px 12px;
+}
+
+#movieCard {
+  background: #f5f5f5;
+  border: none;
 }
 
 :root {
