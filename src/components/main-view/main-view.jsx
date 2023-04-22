@@ -142,7 +142,7 @@ export const MainView = () => {
         setModalShow={setModalShow}
         modalShow={modalShow}
       />
-      <Row className="justify-content-center" md={2}>
+      <Row className="justify-content-center">
         <Routes>
           <Route
             path="/signup"
@@ -220,16 +220,14 @@ export const MainView = () => {
                 ) : movies.length === 0 ? (
                   <Col>The list is empty</Col>
                 ) : (
-                  <Col>
-                    <MovieView
-                      movies={movies}
-                      handleFavMovies={handleFavMovies}
-                      handleRemoveMovies={handleRemoveMovies}
-                      user={user}
-                      setSelectedMovie={setSelectedMovie}
-                      selectedMovie={selectedMovie}
-                    />
-                  </Col>
+                  <MovieView
+                    movies={movies}
+                    handleFavMovies={handleFavMovies}
+                    handleRemoveMovies={handleRemoveMovies}
+                    user={user}
+                    setSelectedMovie={setSelectedMovie}
+                    selectedMovie={selectedMovie}
+                  />
                 )}
               </>
             }

@@ -32,18 +32,13 @@ export const MovieView = ({
   };
 
   return (
-    <Row className="justify-content-md-center" xs={1} sm={1} md={2}>
-      <Col
-        className="mb-5"
-        xs={{ span: 8, offset: 2 }}
-        sm={{ span: 8, offset: 2 }}
-        md={{ span: 4, offset: 0 }}
-      >
+    <Row className="justify-content-center">
+      <Col className="mb-5" xs={10} md={5}>
         <div className="img" style={{ border: "10px solid black" }}>
           <img src={movie.image} className="w-100" />
         </div>
       </Col>
-      <Col className="mb-5" md={{ offset: 1 }} lg={{ offset: 1 }}>
+      <Col className="mb-5 mx-4">
         <Button
           className="bg-secondary"
           variant="primary"
