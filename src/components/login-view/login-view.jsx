@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
 import "../../index.scss";
 
 export const LoginView = ({ onLoggedIn, setAlert }) => {
@@ -37,34 +38,36 @@ export const LoginView = ({ onLoggedIn, setAlert }) => {
   };
 
   return (
-    <Form className="border border-5 p-3" onSubmit={handleSubmit}>
-      <Form.Label className="fw-bold fs-5 text-decoration-underline mb-4">
-        LOGIN
-      </Form.Label>
-      <Form.Group controlId="formUsername">
-        <Form.Label className="fw-medium">Username</Form.Label>
-        <Form.Control
-          className="bg-primary mb-3"
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-          minLength={3}
-        />
-      </Form.Group>
-      <Form.Group controlId="formPassword">
-        <Form.Label className="fw-medium">Password</Form.Label>
-        <Form.Control
-          className="bg-primary mb-3"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </Form.Group>
-      <Button className="bg-secondary" variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+    <Col xs={10}>
+      <Form className="border border-5 p-5" onSubmit={handleSubmit}>
+        <Form.Label className="fw-bold fs-5 text-decoration-underline mb-4">
+          LOGIN
+        </Form.Label>
+        <Form.Group controlId="formUsername">
+          <Form.Label className="fw-medium">Username</Form.Label>
+          <Form.Control
+            className="bg-primary mb-3"
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+            minLength={3}
+          />
+        </Form.Group>
+        <Form.Group controlId="formPassword">
+          <Form.Label className="fw-medium">Password</Form.Label>
+          <Form.Control
+            className="bg-primary mb-3"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </Form.Group>
+        <Button className="bg-secondary" variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </Col>
   );
 };

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import "../../index.scss";
 
 export const UpdateView = ({ user, token, setUser, setAlert }) => {
@@ -48,62 +49,64 @@ export const UpdateView = ({ user, token, setUser, setAlert }) => {
       });
   };
   return (
-    <Row>
-      <Form className="border border-5 p-3" onSubmit={handleSubmit}>
-        <Form.Label className="fw-bold fs-5 text-decoration-underline mb-2">
-          UPDATE PROFILE
-        </Form.Label>
-        <br />
-        <Form.Text>Please complete all fields.</Form.Text>
-        <Form.Group className="mt-4" controlId="formUsername">
-          <Form.Label>Username</Form.Label>
-          <Form.Control
-            className="mb-4"
-            type="text"
-            value={username}
-            placeholder={user.username}
-            onChange={(e) => setUsername(e.target.value)}
-            minLength={3}
-            required
-          />
-        </Form.Group>
-        <Form.Group controlId="formPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            className="mb-4"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            minLength={5}
-            required
-          />
-        </Form.Group>
-        <Form.Group controlId="formEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            className="mb-4"
-            type="email"
-            value={email}
-            placeholder={user.email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </Form.Group>
-        <Form.Group controlId="formBirthday">
-          <Form.Label>Birthday</Form.Label>
-          <Form.Control
-            className="bg-primary mb-4"
-            type="date"
-            value={birthday}
-            placeholder={user.birthday}
-            onChange={(e) => setBirthday(e.target.value)}
-            required
-          />
-        </Form.Group>
-        <Button className="bg-secondary" variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-    </Row>
+    <Col xs={10}>
+      <Row>
+        <Form className="border border-5 p-3" onSubmit={handleSubmit}>
+          <Form.Label className="fw-bold fs-5 text-decoration-underline mb-2">
+            UPDATE PROFILE
+          </Form.Label>
+          <br />
+          <Form.Text>Please complete all fields.</Form.Text>
+          <Form.Group className="mt-4" controlId="formUsername">
+            <Form.Label>Username</Form.Label>
+            <Form.Control
+              className="mb-4"
+              type="text"
+              value={username}
+              placeholder={user.username}
+              onChange={(e) => setUsername(e.target.value)}
+              minLength={3}
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              className="mb-4"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              minLength={5}
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              className="mb-4"
+              type="email"
+              value={email}
+              placeholder={user.email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formBirthday">
+            <Form.Label>Birthday</Form.Label>
+            <Form.Control
+              className="bg-primary mb-4"
+              type="date"
+              value={birthday}
+              placeholder={user.birthday}
+              onChange={(e) => setBirthday(e.target.value)}
+              required
+            />
+          </Form.Group>
+          <Button className="bg-secondary" variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </Row>
+    </Col>
   );
 };

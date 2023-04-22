@@ -142,7 +142,7 @@ export const MainView = () => {
         setModalShow={setModalShow}
         modalShow={modalShow}
       />
-      <Row className="justify-content-md-center" sm={1}>
+      <Row className="justify-content-center" md={2}>
         <Routes>
           <Route
             path="/signup"
@@ -151,9 +151,7 @@ export const MainView = () => {
                 {user ? (
                   <Navigate to="/" />
                 ) : (
-                  <Col md={5}>
-                    <SignupView setAlert={setAlert} />
-                  </Col>
+                  <SignupView setAlert={setAlert} />
                 )}
               </>
             }
@@ -165,16 +163,14 @@ export const MainView = () => {
                 {user ? (
                   <Navigate to="/" />
                 ) : (
-                  <Col md={5}>
-                    <LoginView
-                      onLoggedIn={(user, token) => {
-                        setUser(user);
-                        setToken(token);
-                        setFavoriteMovies(user.favoriteMovies);
-                      }}
-                      setAlert={setAlert}
-                    />
-                  </Col>
+                  <LoginView
+                    onLoggedIn={(user, token) => {
+                      setUser(user);
+                      setToken(token);
+                      setFavoriteMovies(user.favoriteMovies);
+                    }}
+                    setAlert={setAlert}
+                  />
                 )}
               </>
             }
@@ -186,7 +182,6 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : (
-                  // <Col>
                   <ProfileView
                     user={user}
                     token={token}
@@ -195,7 +190,6 @@ export const MainView = () => {
                     favMovies={favMovies}
                     setAlert={setAlert}
                   />
-                  // </Col>
                 )}
               </>
             }
@@ -207,14 +201,12 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : (
-                  <Col md={7}>
-                    <UpdateView
-                      user={user}
-                      token={token}
-                      setUser={setUser}
-                      setAlert={setAlert}
-                    />
-                  </Col>
+                  <UpdateView
+                    user={user}
+                    token={token}
+                    setUser={setUser}
+                    setAlert={setAlert}
+                  />
                 )}
               </>
             }
@@ -256,9 +248,8 @@ export const MainView = () => {
                       <Col
                         className="mb-5"
                         key={movie.id}
-                        xs={{ span: 8, offset: 2 }}
-                        sm={{ span: 8, offset: 2 }}
-                        md={{ span: 6, offset: 0 }}
+                        xs={10}
+                        md={4}
                         lg={3}
                       >
                         <MovieCard

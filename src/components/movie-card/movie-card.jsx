@@ -1,6 +1,7 @@
 import Proptypes from "prop-types";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Col from "react-bootstrap/Col";
 import "./movie-card.scss";
 
 export const MovieCard = ({ movie }) => {

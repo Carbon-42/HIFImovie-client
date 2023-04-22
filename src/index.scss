@@ -3,5 +3,9 @@ $secondary: lightgrey;
 $body-bg: whitesmoke;
 $border-color: black;
 
+#movieCard {
+    background: whitesmoke;
+    border: none;
+}
 
 @import "~bootstrap/scss/bootstrap.scss";
