@@ -43,7 +43,7 @@ export const MovieView = ({
           <img src={movie.image} className="w-100" />
         </div>
       </Col>
-      <Col className="mb-5" lg={{ offset: 1 }}>
+      <Col className="mb-5" md={{ offset: 1 }} lg={{ offset: 1 }}>
         <Button
           className="bg-secondary"
           variant="primary"
