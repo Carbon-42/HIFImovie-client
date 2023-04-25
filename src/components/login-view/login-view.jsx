@@ -40,11 +40,11 @@ export const LoginView = ({ onLoggedIn, setAlert }) => {
   return (
     <Col xs={10}>
       <Form className="border border-5 p-5" onSubmit={handleSubmit}>
-        <Form.Label className="fw-bold fs-5 text-decoration-underline mb-4">
+        <Form.Label className="fw-bold fs-3 text-decoration-underline mb-4">
           LOGIN
         </Form.Label>
         <Form.Group controlId="formUsername">
-          <Form.Label className="fw-medium">Username</Form.Label>
+          <Form.Label className="fw-medium fs-4">Username</Form.Label>
           <Form.Control
             className="bg-primary mb-3"
             type="text"
@@ -55,7 +55,7 @@ export const LoginView = ({ onLoggedIn, setAlert }) => {
           />
         </Form.Group>
         <Form.Group controlId="formPassword">
-          <Form.Label className="fw-medium">Password</Form.Label>
+          <Form.Label className="fw-medium fs-4">Password</Form.Label>
           <Form.Control
             className="bg-primary mb-3"
             type="password"

@@ -27406,18 +27406,20 @@ const MainView = ()=>{
                                     replace: true
                                 }, void 0, false, void 0, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                     children: "Loading movies ..."
-                                }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                                }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+                                    className: "justify-content-center",
                                     children: viewMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                             className: "mb-5",
                                             xs: 10,
-                                            md: 4,
+                                            sm: 4,
+                                            md: 3,
                                             lg: 3,
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                                                 movie: movie,
                                                 handleFavMovies: handleFavMovies
                                             }, movie.id, false, void 0, void 0)
                                         }, movie.id, false, void 0, void 0))
-                                }, void 0, false)
+                                }, void 0, false, void 0, void 0)
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "src/components/main-view/main-view.jsx",
@@ -46462,7 +46464,6 @@ const MovieView = ({ movies , handleFavMovies , handleRemoveMovies , setSelected
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                 className: "mb-5",
                 xs: 10,
-                md: 5,
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "img",
                     style: {
@@ -46841,7 +46842,7 @@ const LoginView = ({ onLoggedIn , setAlert  })=>{
             onSubmit: handleSubmit,
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
-                    className: "fw-bold fs-5 text-decoration-underline mb-4",
+                    className: "fw-bold fs-3 text-decoration-underline mb-4",
                     children: "LOGIN"
                 }, void 0, false, {
                     fileName: "src/components/login-view/login-view.jsx",
@@ -46852,7 +46853,7 @@ const LoginView = ({ onLoggedIn , setAlert  })=>{
                     controlId: "formUsername",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
-                            className: "fw-medium",
+                            className: "fw-medium fs-4",
                             children: "Username"
                         }, void 0, false, {
                             fileName: "src/components/login-view/login-view.jsx",
@@ -46881,7 +46882,7 @@ const LoginView = ({ onLoggedIn , setAlert  })=>{
                     controlId: "formPassword",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
-                            className: "fw-medium",
+                            className: "fw-medium fs-4",
                             children: "Password"
                         }, void 0, false, {
                             fileName: "src/components/login-view/login-view.jsx",
@@ -46989,7 +46990,7 @@ const SignupView = ({ setAlert  })=>{
             onSubmit: handleSubmit,
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
-                    className: "fw-bold fs-5 text-decoration-underline mb-4",
+                    className: "fw-bold fs-3 text-decoration-underline mb-4",
                     children: "SIGNUP"
                 }, void 0, false, {
                     fileName: "src/components/signup-view/signup-view.jsx",
@@ -47000,6 +47001,7 @@ const SignupView = ({ setAlert  })=>{
                     controlId: "formUsername",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                            className: "fs-4",
                             children: "Username"
                         }, void 0, false, {
                             fileName: "src/components/signup-view/signup-view.jsx",
@@ -47028,6 +47030,7 @@ const SignupView = ({ setAlert  })=>{
                     controlId: "formPassword",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                            className: "fs-4",
                             children: "Password"
                         }, void 0, false, {
                             fileName: "src/components/signup-view/signup-view.jsx",
@@ -47056,6 +47059,7 @@ const SignupView = ({ setAlert  })=>{
                     controlId: "formEmail",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                            className: "fs-4",
                             children: "Email"
                         }, void 0, false, {
                             fileName: "src/components/signup-view/signup-view.jsx",
@@ -47083,6 +47087,7 @@ const SignupView = ({ setAlert  })=>{
                     controlId: "formBirthday",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
+                            className: "fs-4",
                             children: "Birthday"
                         }, void 0, false, {
                             fileName: "src/components/signup-view/signup-view.jsx",
@@ -47183,13 +47188,11 @@ const ProfileView = ({ user , token , favMovies , setAlert  })=>{
         });
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-        className: "mx-5",
-        xs: 10,
+        className: "mx-3",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                className: "mb-2 justify-content-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                    className: "bg-primary border border-5 p-4",
+                    className: "bg-primary border border-5 p-4 mb-3",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
                             className: "fw-bold fs-5 text-decoration-underline mb-3 ms-3",
@@ -47200,7 +47203,7 @@ const ProfileView = ({ user , token , favMovies , setAlert  })=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
-                            className: "bg-primary mb-3",
+                            className: "bg-primary mb-3 fs-5",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Text, {
                                     children: [
@@ -47295,10 +47298,10 @@ const ProfileView = ({ user , token , favMovies , setAlert  })=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                className: "bg-primary border border-5 p-4",
+                className: "bg-primary border border-5 p-4 justify-content-center",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Title, {
-                        className: "fw-bold fs-5 text-decoration-underline mb-4 mx-4",
+                        className: "fw-bold fs-5 text-decoration-underline mb-4",
                         children: "FAVORITE MOVIES"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/profile-view.jsx",
@@ -47314,9 +47317,10 @@ const ProfileView = ({ user , token , favMovies , setAlert  })=>{
                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                         children: favMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                 className: "mb-3",
-                                md: 6,
-                                lg: 4,
-                                xl: 3,
+                                xs: 10,
+                                sm: 4,
+                                md: 3,
+                                lg: 3,
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                                     movie: movie
                                 }, movie.id, false, {
@@ -47610,6 +47614,7 @@ var _reactRouterDom = require("react-router-dom");
 var _form = require("react-bootstrap/Form");
 var _formDefault = parcelHelpers.interopDefault(_form);
 var _react = require("react");
+var _indexScss = require("../../index.scss");
 var _s = $RefreshSig$();
 const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
     _s();
@@ -47629,6 +47634,7 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
         location
     ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {
+        id: "navbar",
         bg: "dark",
         variant: "dark",
         expand: "lg",
@@ -47636,19 +47642,21 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _containerDefault.default), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default).Brand, {
+                    className: "fs-1",
+                    id: "navbar",
                     as: (0, _reactRouterDom.Link),
                     to: "/",
                     children: "HIFI Movies"
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                    lineNumber: 30,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default).Toggle, {
                     "aria-controls": "basic-navbar-nav"
                 }, void 0, false, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                    lineNumber: 33,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default).Collapse, {
@@ -47660,21 +47668,23 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
                                 !user && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
+                                            className: "fs-2",
                                             as: (0, _reactRouterDom.Link),
                                             to: "/login",
                                             children: "Login"
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                            lineNumber: 38,
+                                            lineNumber: 39,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
+                                            className: "fs-2",
                                             as: (0, _reactRouterDom.Link),
                                             to: "/signup",
                                             children: "Signup"
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                            lineNumber: 41,
+                                            lineNumber: 42,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
@@ -47682,31 +47692,34 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
                                 user && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
+                                            className: "fs-2",
                                             as: (0, _reactRouterDom.Link),
                                             to: "/",
                                             children: "Home"
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                            lineNumber: 48,
+                                            lineNumber: 49,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
+                                            className: "fs-2",
                                             as: (0, _reactRouterDom.Link),
                                             to: "/profile",
                                             children: "Profile"
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                            lineNumber: 51,
+                                            lineNumber: 52,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
+                                            className: "fs-2",
                                             onClick: onLoggedOut,
                                             as: (0, _reactRouterDom.Link),
                                             to: "/",
                                             children: "Logout"
                                         }, void 0, false, {
                                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                            lineNumber: 54,
+                                            lineNumber: 55,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
@@ -47714,47 +47727,47 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                            lineNumber: 35,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, undefined),
                         homeView && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default), {
-                                className: "d-flex",
+                                className: "d-flex mt-3",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
                                     type: "search",
                                     placeholder: "Search",
                                     value: query,
-                                    className: "me-2",
+                                    className: "me-2 fs-2",
                                     "aria-label": "Search",
                                     onChange: (e)=>{
                                         setQuery(e.target.value);
                                     }
                                 }, void 0, false, {
                                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                    lineNumber: 63,
+                                    lineNumber: 69,
                                     columnNumber: 17
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                                lineNumber: 62,
+                                lineNumber: 68,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/navigation-bar/navigation-bar.jsx",
-                    lineNumber: 34,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/navigation-bar/navigation-bar.jsx",
-            lineNumber: 29,
+            lineNumber: 30,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/navigation-bar/navigation-bar.jsx",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 5
     }, undefined);
 };
@@ -47772,6 +47785,6 @@ $RefreshReg$(_c, "NavigationBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap/Container":"hEdsw","react-bootstrap/Nav":"cXyL2","react-bootstrap/Navbar":"1mHjo","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Form":"iBZ80","react":"21dqq"}],"lJZlQ":[function() {},{}]},["1xC6H","7a1Sg","d8Dch"], "d8Dch", "parcelRequireae51")
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap/Container":"hEdsw","react-bootstrap/Nav":"cXyL2","react-bootstrap/Navbar":"1mHjo","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Form":"iBZ80","react":"21dqq","../../index.scss":"lJZlQ"}],"lJZlQ":[function() {},{}],"lJZlQ":[function() {},{}]},["1xC6H","7a1Sg","d8Dch"], "d8Dch", "parcelRequireae51")
 
 //# sourceMappingURL=index.b4b6dfad.js.map

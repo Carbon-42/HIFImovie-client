@@ -37,11 +37,11 @@ export const SignupView = ({ setAlert }) => {
   return (
     <Col xs={10}>
       <Form className="border border-5 p-5" onSubmit={handleSubmit}>
-        <Form.Label className="fw-bold fs-5 text-decoration-underline mb-4">
+        <Form.Label className="fw-bold fs-3 text-decoration-underline mb-4">
           SIGNUP
         </Form.Label>
         <Form.Group controlId="formUsername">
-          <Form.Label>Username</Form.Label>
+          <Form.Label className="fs-4">Username</Form.Label>
           <Form.Control
             className="bg-primary mb-3"
             type="text"
@@ -52,7 +52,7 @@ export const SignupView = ({ setAlert }) => {
           />
         </Form.Group>
         <Form.Group controlId="formPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="fs-4">Password</Form.Label>
           <Form.Control
             className="bg-primary mb-3"
             type="password"
@@ -63,7 +63,7 @@ export const SignupView = ({ setAlert }) => {
           />
         </Form.Group>
         <Form.Group controlId="formEmail">
-          <Form.Label>Email</Form.Label>
+          <Form.Label className="fs-4">Email</Form.Label>
           <Form.Control
             className="bg-primary mb-3"
             type="email"
@@ -73,7 +73,7 @@ export const SignupView = ({ setAlert }) => {
           />
         </Form.Group>
         <Form.Group controlId="formBirthday">
-          <Form.Label>Birthday</Form.Label>
+          <Form.Label className="fs-4">Birthday</Form.Label>
           <Form.Control
             className="bg-primary mb-3"
             type="date"

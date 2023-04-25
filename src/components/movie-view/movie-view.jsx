@@ -33,7 +33,7 @@ export const MovieView = ({
 
   return (
     <Row className="justify-content-center">
-      <Col className="mb-5" xs={10} md={5}>
+      <Col className="mb-5" xs={10}>
         <div className="img" style={{ border: "10px solid black" }}>
           <img src={movie.image} className="w-100" />
         </div>

@@ -241,14 +241,14 @@ export const MainView = () => {
                 ) : movies.length === 0 ? (
                   <Col>Loading movies ...</Col>
                 ) : (
-                  <>
+                  <Row className="justify-content-center">
                     {viewMovies.map((movie) => (
                       <Col
                         key={movie.id}
                         className="mb-5"
-                        key={movie.id}
                         xs={10}
-                        md={4}
+                        sm={4}
+                        md={3}
                         lg={3}
                       >
                         <MovieCard
@@ -258,7 +258,7 @@ export const MainView = () => {
                         />
                       </Col>
                     ))}
-                  </>
+                  </Row>
                 )}
               </>
             }

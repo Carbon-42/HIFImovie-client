@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { useEffect } from "react";
+import "../../index.scss";
 
 export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
   const [query, setQuery] = useState("");
@@ -25,9 +26,9 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
   }, [location]);
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
+    <Navbar id="navbar" bg="dark" variant="dark" expand="lg" className="mb-4">
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand className="fs-1" id="navbar" as={Link} to="/">
           HIFI Movies
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -35,23 +36,28 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
           <Nav className="me-auto">
             {!user && (
               <>
-                <Nav.Link as={Link} to="/login">
+                <Nav.Link className="fs-2" as={Link} to="/login">
                   Login
                 </Nav.Link>
-                <Nav.Link as={Link} to="/signup">
+                <Nav.Link className="fs-2" as={Link} to="/signup">
                   Signup
                 </Nav.Link>
               </>
             )}
             {user && (
               <>
-                <Nav.Link as={Link} to="/">
+                <Nav.Link className="fs-2" as={Link} to="/">
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to="/profile">
+                <Nav.Link className="fs-2" as={Link} to="/profile">
                   Profile
                 </Nav.Link>
-                <Nav.Link onClick={onLoggedOut} as={Link} to="/">
+                <Nav.Link
+                  className="fs-2"
+                  onClick={onLoggedOut}
+                  as={Link}
+                  to="/"
+                >
                   Logout
                 </Nav.Link>
               </>
@@ -59,12 +65,12 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
           </Nav>
           {homeView && (
             <>
-              <Form className="d-flex">
+              <Form className="d-flex mt-3">
                 <Form.Control
                   type="search"
                   placeholder="Search"
                   value={query}
-                  className="me-2"
+                  className="me-2 fs-2"
                   aria-label="Search"
                   onChange={(e) => {
                     setQuery(e.target.value);
