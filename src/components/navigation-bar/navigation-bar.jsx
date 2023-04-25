@@ -36,24 +36,24 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
           <Nav className="me-auto">
             {!user && (
               <>
-                <Nav.Link className="fs-2" as={Link} to="/login">
+                <Nav.Link className="fs-3" as={Link} to="/login">
                   Login
                 </Nav.Link>
-                <Nav.Link className="fs-2" as={Link} to="/signup">
+                <Nav.Link className="fs-3" as={Link} to="/signup">
                   Signup
                 </Nav.Link>
               </>
             )}
             {user && (
               <>
-                <Nav.Link className="fs-2" as={Link} to="/">
+                <Nav.Link className="fs-3" as={Link} to="/">
                   Home
                 </Nav.Link>
-                <Nav.Link className="fs-2" as={Link} to="/profile">
+                <Nav.Link className="fs-3" as={Link} to="/profile">
                   Profile
                 </Nav.Link>
                 <Nav.Link
-                  className="fs-2"
+                  className="fs-3"
                   onClick={onLoggedOut}
                   as={Link}
                   to="/"
@@ -65,12 +65,12 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
           </Nav>
           {homeView && (
             <>
-              <Form className="d-flex mt-3">
+              <Form className="d-flex mt-1">
                 <Form.Control
                   type="search"
                   placeholder="Search"
                   value={query}
-                  className="me-2 fs-2"
+                  className="me-2 fs-3"
                   aria-label="Search"
                   onChange={(e) => {
                     setQuery(e.target.value);

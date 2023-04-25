@@ -47668,7 +47668,7 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
                                 !user && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
-                                            className: "fs-2",
+                                            className: "fs-3",
                                             as: (0, _reactRouterDom.Link),
                                             to: "/login",
                                             children: "Login"
@@ -47678,7 +47678,7 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
-                                            className: "fs-2",
+                                            className: "fs-3",
                                             as: (0, _reactRouterDom.Link),
                                             to: "/signup",
                                             children: "Signup"
@@ -47692,7 +47692,7 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
                                 user && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
-                                            className: "fs-2",
+                                            className: "fs-3",
                                             as: (0, _reactRouterDom.Link),
                                             to: "/",
                                             children: "Home"
@@ -47702,7 +47702,7 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
-                                            className: "fs-2",
+                                            className: "fs-3",
                                             as: (0, _reactRouterDom.Link),
                                             to: "/profile",
                                             children: "Profile"
@@ -47712,7 +47712,7 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navDefault.default).Link, {
-                                            className: "fs-2",
+                                            className: "fs-3",
                                             onClick: onLoggedOut,
                                             as: (0, _reactRouterDom.Link),
                                             to: "/",
@@ -47732,12 +47732,12 @@ const NavigationBar = ({ user , onLoggedOut , onSearch  })=>{
                         }, undefined),
                         homeView && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default), {
-                                className: "d-flex mt-3",
+                                className: "d-flex mt-1",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Control, {
                                     type: "search",
                                     placeholder: "Search",
                                     value: query,
-                                    className: "me-2 fs-2",
+                                    className: "me-2 fs-3",
                                     "aria-label": "Search",
                                     onChange: (e)=>{
                                         setQuery(e.target.value);
