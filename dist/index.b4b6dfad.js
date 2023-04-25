@@ -46464,6 +46464,7 @@ const MovieView = ({ movies , handleFavMovies , handleRemoveMovies , setSelected
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                 className: "mb-5",
                 xs: 10,
+                md: 6,
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "img",
                     style: {
