@@ -31,7 +31,7 @@
 <div align="center">
 
 <h3 align="center">HIFI Movies React Client</h3>
-<a href="https://hifimovies.netlify.app/login" target="_blank">Live URL</a>
+<a href="https://hifimovies.netlify.app" target="_blank">Live URL</a>
 
   <p align="center">
     <!-- project_description -->
